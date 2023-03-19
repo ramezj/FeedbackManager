@@ -3,12 +3,7 @@ import { PrismaClient } from '@prisma/client';
 
 export default async function handler(req, res) {
   const prisma = new PrismaClient();
-  await prisma.$connect();
-  const test = await prisma.user.create({
-    data: {
-      username: "Admin",
-      email: "admin@gmail.com"
-    }
-  })
-  res.status(200).json({test})
+  const test = await prisma.user.findMany({});
+  console.log(test[0]);
+  res.status(200).json({account:test[0]})
 }
