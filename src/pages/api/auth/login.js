@@ -6,14 +6,17 @@ export default async function handler(req, res) {
     const prisma = new PrismaClient();
     const { body, method } = req;
     const { username, email, password } = req.body;
+    console.log(req.body);
     if (method !== "POST") {
         return res.status(405).json({
+            ok:false,
             message: "Method not allowed",
           });
     }
-    if (!email || !password) {
+    if (!req.body.email || !req.body.password) {
         return res.status(400).json({
-            message: "missing fields",
+            ok:false,
+            message: "missing field..",
           });
     }
     try {
@@ -24,6 +27,7 @@ export default async function handler(req, res) {
         })
         if (!emailExist) {
             return res.status(400).json({
+                ok:false,
                 message:"User doesn't exist."
             })
         } else {
@@ -31,10 +35,12 @@ export default async function handler(req, res) {
             if(confirmPassword) {
                 const token = await jwt.sign({id: emailExist.id}, process.env.JWT_SECRET);
                 return res.status(200).json({
+                    ok:true,
                     token:token
                 })
             } else {
                 return res.status(400).json({
+                    ok:false,
                     message:"Password Incorrect"
                 })
             }

@@ -8,11 +8,13 @@ export default async function handler(req, res) {
     const { username, email, password } = req.body;
     if (method !== "POST") {
         return res.status(405).json({
+            ok:false,
             message: "Method not allowed",
           });
     }
     if (!username || !email || !password) {
         return res.status(400).json({
+            ok:false,
             message: "missing fields",
           });
     }
@@ -24,6 +26,7 @@ export default async function handler(req, res) {
         })
         if (emailExist) {
             return res.status(400).json({
+                ok:false,
                 message:"User already exists"
             });
         } else {
@@ -38,6 +41,7 @@ export default async function handler(req, res) {
             console.log(createUser);
             const token = await jwt.sign({id: createUser.id}, process.env.JWT_SECRET);
             return res.status(200).json({
+                ok:true,
                 token:token
             })
         }
