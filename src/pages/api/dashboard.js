@@ -11,7 +11,7 @@ export default async function handler(req, res) {
             message: "Method not allowed",
           });
     }
-    const token = req.body.token;
+    const token = req.cookies.user;
     if (!token) {
         return res.status(400).json({
             message:"Missing token."

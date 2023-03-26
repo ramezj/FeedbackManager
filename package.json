@@ -12,6 +12,7 @@
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.11.0",
     "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "got": "^12.6.0",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "dotenv-webpack": "^8.0.1",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
   }
