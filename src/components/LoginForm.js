@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import useSWR from 'swr';
 import Cookies from 'universal-cookie';
+import { useRouter } from 'next/router'
 
 const LoginForm = () => {
     const cookies = new Cookies();
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
+    const [ error, setError ] = useState();
+    const router = useRouter()
     const LoginUser = async () => {
         const payload = {
             email:email,
@@ -20,8 +23,12 @@ const LoginForm = () => {
             body:JSON.stringify(payload)
         })
         const res = await response.json();
+        if(res.ok == false) {
+            setError(res.message);
+        }
         if (res.ok == true) {
             cookies.set('user', res.token);
+            router.push('/Dashboard')
         }
         console.log(res);
     } 
@@ -34,6 +41,7 @@ const LoginForm = () => {
     <input type="pas{sword" placeholder="email" value={password} onChange={(e) => {setPassword(e.target.value)}}/>
     <br></br>
     <button onClick={LoginUser}> Login </button>
+    <p>{error}</p>
     </div>
   )
 }

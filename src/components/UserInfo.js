@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react'
 import useSWR from 'swr';
 import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
+import { useRouter } from 'next/router'
 
 
 const UserInfo = () => {
     const [ user, setUser ] = useState("loading data");
     const cookies = new Cookies();
+    const router = useRouter()
     useEffect(() => {
         const TokenVerification = async () => {
             const userToken = cookies.get('user');
             if (!userToken) {
-                console.log("User Cookie Not Found")
+                router.push("/Login")
+                // console.log("User Cookie Not Found")
             } else {
                     const response = await fetch('/api/dashboard', {
                         method:'GET',
