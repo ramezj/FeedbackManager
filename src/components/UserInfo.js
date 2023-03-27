@@ -4,9 +4,9 @@ import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 
-
 const UserInfo = () => {
     const [ user, setUser ] = useState("loading");
+    const [ feedback, setFeedback ] = useState([])
     const cookies = new Cookies();
     const router = useRouter()
     useEffect(() => {
@@ -25,7 +25,8 @@ const UserInfo = () => {
                         },
                     })
                     const res = await response.json();
-                    setUser(res);
+                    setUser(res.user);
+                    setFeedback(res.feedbacks)
                     console.log(res);
             }
         }
@@ -46,8 +47,10 @@ const UserInfo = () => {
   return (
     <div>
         <br></br>
-        <h1>{user.user.username}</h1>
-        <p>{user.user.email}</p>
+        <h1>{user.username}</h1>
+        <p>{user.email}</p>
+        <p>{JSON.stringify(feedback)}</p>
+
     </div>
   )
 }

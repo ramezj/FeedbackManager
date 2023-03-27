@@ -29,8 +29,15 @@ export default async function handler(req, res) {
                          id:verifyToken.id
                     }
                 })
+                const feedbacks = await prisma.feedback.findMany({
+                    where: {
+                        userId:verifyToken.id
+                    }
+                })
+                console.log(feedbacks)
                 return res.status(200).json({
-                    user
+                    user,
+                    feedbacks
                 })
             }   
         } catch (error) {
