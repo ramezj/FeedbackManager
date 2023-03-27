@@ -62,4 +62,20 @@ model User {
   password  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  feedbacks Feedback[]
 }
+// model Project {
+//   id  String @id @default(auto()) @map("_id") @db.ObjectId
+//   userId String
+//   user User @relation(fields: [userId], references: [id])
+//   feedbacks Feedback[]
+// }
+model Feedback {
+  id  String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  rating Int
+  description String
+  userId String
+  user User @relation(fields: [userId], references: [id])
+}
+
