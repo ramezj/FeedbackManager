@@ -25,9 +25,9 @@ const UserInfo = () => {
                         },
                     })
                     const res = await response.json();
-                    // if(res.user == null) {
-                    //     return router.push("/Login")
-                    // }
+                    if(res.user == null) {
+                        return router.push("/Login")
+                    }
                     setUser(res.user);
                     setFeedback(res.feedbacks)
                     console.log(res);
@@ -49,7 +49,7 @@ const UserInfo = () => {
     )
   return (
     <div>
-        <div class="min-h-screen flex">
+        {/* <div class="min-h-screen flex">
   <div class="flex-1 ...">
   <br></br><br></br>
   <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
@@ -71,7 +71,11 @@ const UserInfo = () => {
             )
         })}
   </div>
-</div>
+</div> */}
+
+<p>{JSON.stringify(user)}</p>
+<br></br>
+<p>{JSON.stringify(feedback)}</p>
     </div>
   )
 }
