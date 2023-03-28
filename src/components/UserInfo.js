@@ -25,9 +25,9 @@ const UserInfo = () => {
                         },
                     })
                     const res = await response.json();
-                    if(res.user == null) {
-                        return router.push("/Login")
-                    }
+                    // if(res.user == null) {
+                    //     return router.push("/Login")
+                    // }
                     setUser(res.user);
                     setFeedback(res.feedbacks)
                     console.log(res);
