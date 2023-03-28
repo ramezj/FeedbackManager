@@ -34,7 +34,12 @@ export default async function handler(req, res) {
                         userId:verifyToken.id
                     }
                 })
-                console.log(feedbacks)
+                if (!feedbacks) {
+                    console.log("Backend Response: No feedback Found.")
+                    return res.status(200).json({
+                        message:"Backend Response: No feedback Found."
+                    })
+                }
                 return res.status(200).json({
                     user,
                     feedbacks
@@ -42,7 +47,7 @@ export default async function handler(req, res) {
             }   
         } catch (error) {
             return res.status(400).json({
-                message:error.message
+                message:error
             })
         }
     }
