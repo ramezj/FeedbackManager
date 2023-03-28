@@ -47,9 +47,17 @@ const UserInfo = () => {
   return (
     <div>
         <br></br>
-        <h1>{user.username}</h1>
+        <h1>Hello {user.username} 👋</h1>
         <p>{user.email}</p>
-        <p>{JSON.stringify(feedback)}</p>
+        {feedback.map((x) => {
+            return (
+                <>
+                <p>{x.title}</p>
+                <p>{x.description}</p>
+                </>
+            )
+        })}
+        {/* <p>{JSON.stringify(feedback)}</p> */}
 
     </div>
   )
