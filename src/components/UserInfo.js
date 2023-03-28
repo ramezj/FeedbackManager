@@ -13,6 +13,7 @@ const UserInfo = () => {
         const TokenVerification = async () => {
             const userToken = cookies.get('user');
             if (!userToken) {
+                console.log("No Token Found, redirecting.")
                 router.push("/Login")
                 // console.log("User Cookie Not Found")
             } else {
@@ -25,9 +26,10 @@ const UserInfo = () => {
                         },
                     })
                     const res = await response.json();
-                    if(res.user == null) {
-                        return router.push("/Login")
-                    }
+                    // if(res.user == null) {
+                    //     console.log("User token is null, redirecting.")
+                    //     return router.push("/Login")
+                    // }
                     setUser(res.user);
                     setFeedback(res.feedbacks)
                     console.log(res);
