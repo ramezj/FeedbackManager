@@ -27,10 +27,10 @@ const UserInfo = () => {
                         },
                     })
                     const res = await response.json();
-                    // if(res.user == null) {
-                    //     console.log("User token is null, redirecting.")
-                    //     return router.push("/Login")
-                    // }
+                    if(res.user == null || res.user == "null") {
+                        console.log("User token is null, redirecting.")
+                        return router.push("/Login")
+                    }
                     setUser(res.user);
                     setFeedback(res.feedbacks);
                     setLoading(false)
