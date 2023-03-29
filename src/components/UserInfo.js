@@ -32,7 +32,7 @@ const UserInfo = () => {
                     //     return router.push("/Login")
                     // }
                     setUser(res.user);
-                    setLoading(false);
+                    setLoading(false)
                     console.log(res);
             }
         }
@@ -42,18 +42,18 @@ const UserInfo = () => {
     if (isLoading) return (
         <>
         <br></br>
-        <div role="status" className="max-w-sm animate-pulse">
-            <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-            <span className="sr-only">Loading...</span>
+        <div role="status" class="max-w-sm animate-pulse">
+            <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+            <span class="sr-only">Loading...</span>
         </div>
         </>
     )
     if (!user) return <><p>No Profile Data..</p></>
   return (
     <div>
-        {/* <div class="min-h-screen flex">
+        <div class="min-h-screen flex">
   <div class="flex-1 ...">
   <br></br><br></br>
   <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
@@ -75,9 +75,11 @@ const UserInfo = () => {
             )
         })}
   </div>
-</div> */}
+</div>
 
 <p>{JSON.stringify(user)}</p>
+<br></br>
+<p>{JSON.stringify(feedback)}</p>
     </div>
   )
 }
