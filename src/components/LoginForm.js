@@ -35,8 +35,11 @@ const LoginForm = () => {
 
     return (
     <div>
-        <br></br>    
-<div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
+        <div class="min-h-screen flex">
+  <div class="flex-1 ...">
+    <br></br><br></br><br></br><br></br><br></br><br></br>
+  <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
+    <h1 class="text-3xl font-semibold">Sign In</h1>
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white float-left">Your email</label>
             <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
@@ -47,9 +50,15 @@ const LoginForm = () => {
         </div>
         <button onClick={LoginUser} type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
         <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-            <b class="float-left">Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a></b>
+            <b class="float-left">Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create an account</a></b>
             <p>{error}</p>
         </div>
+</div>
+  </div>
+  <div class="bg-green-400 flex-1 ...">
+    <br></br><br></br><br></br><br></br><br></br><br></br>
+    <h1 class="text-4xl font-bold">Welcome to Feedbacker! 👋</h1>
+  </div>
 </div>
     </div>
   )
