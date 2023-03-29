@@ -62,6 +62,7 @@ const UserInfo = () => {
   </h1>
   </div>
   <div class="flex-1 ...">
+    <br></br>
   {feedback.map((x) => {
             return (
                 <>
@@ -75,7 +76,6 @@ const UserInfo = () => {
                 </>
             )
         })}
-        {/* <p>{JSON.stringify(feedback)}</p> */}
   </div>
 </div>
     </div>
