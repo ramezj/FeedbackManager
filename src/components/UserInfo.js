@@ -32,7 +32,7 @@ const UserInfo = () => {
                     //     return router.push("/Login")
                     // }
                     setUser(res.user);
-                    setFeedback(res.feedback);
+                    setFeedback(res.feedbacks);
                     setLoading(false)
                     console.log(res);
             }
