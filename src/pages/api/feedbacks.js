@@ -24,13 +24,19 @@ export default async function handler(req, res) {
                     message:"Couldn't Verify Token"
                 })
             } else {
-                const user = await prisma.user.findUnique({
+                const feedbacks = await prisma.feedback.findMany({
                     where: {
-                         id:verifyToken.id
+                        userId:verifyToken.id
                     }
                 })
+                if (!feedbacks) {
+                    console.log("Backend Response: No feedback Found.")
+                    return res.status(200).json({
+                        message:"Backend Response: No feedback Found."
+                    })
+                }
                 return res.status(200).json({
-                    user
+                    feedbacks
                 })
             }   
         } catch (error) {

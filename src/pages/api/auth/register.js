@@ -30,32 +30,37 @@ export default async function handler(req, res) {
                 message:"User already exists"
             });
         } else {
-            const hashedPassword = await bcrypt.hash(req.body.password, 10);
-            const createUser = await prisma.user.create({
-                data: {
-                    username:req.body.username,
-                    email:req.body.email,
-                    password:hashedPassword
+            try {
+                const hashedPassword = await bcrypt.hash(req.body.password, 10);
+                const createUser = await prisma.user.create({
+                    data: {
+                        username:req.body.username,
+                        email:req.body.email,
+                        password:hashedPassword
+                    }
+                });
+                const createFeedbacks = await prisma.feedback.create({
+                    data: {
+                        title:"Welcome!",
+                        rating:5,
+                        description:`Hello ${createUser.username}, we are glad you decided to use FeedbackManager, Let's get you started!`,
+                        userId:createUser.id
+                    }
+                })
+                console.log(createUser);
+                console.log(createFeedbacks);
+                const token = await jwt.sign({id: createUser.id}, process.env.JWT_SECRET);
+                return res.status(200).json({
+                    ok:true,
+                    token:token
+                })
+                } catch (error) {
+                    console.log(error);
+                    res.status(400).json(error);
                 }
-            });
-            const createFeedbacks = await prisma.feedback.create({
-                data: {
-                    title:"Welcome!",
-                    rating:5,
-                    description:`Hello ${createUser.username}, we are glad you decided to use FeedbackManager, Let's get you started!`,
-                    userId:createUser.id
-                }
-            })
-            console.log(createUser);
-            console.log(createFeedbacks);
-            const token = await jwt.sign({id: createUser.id}, process.env.JWT_SECRET);
-            return res.status(200).json({
-                ok:true,
-                token:token
-            })
+            }
+        } catch (error) {
+            console.log(error);
+            res.status(400).json(error);
         }
-    } catch (error) {
-        console.log(error);
-        res.status(400).json(error);
     }
-  }
