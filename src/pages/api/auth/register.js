@@ -51,6 +51,8 @@ export default async function handler(req, res) {
                 console.log(createFeedbacks);
                 const token = await jwt.sign({id: createUser.id}, process.env.JWT_SECRET);
                 return res.status(200).json({
+                    createUser,
+                    createFeedbacks,
                     ok:true,
                     token:token
                 })
