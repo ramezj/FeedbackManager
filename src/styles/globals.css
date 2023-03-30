@@ -83,7 +83,9 @@
   margin: 0;
 }
 
-html,
+html {
+  background-color:white;
+}
 body {
   max-width: 100vw;
   overflow-x: hidden;
