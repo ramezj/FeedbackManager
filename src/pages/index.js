@@ -20,7 +20,7 @@ export default function Home() {
     }
   }, [])
   const redirectDashboard = () => {
-    router.push('/' + link)
+    router.push(link)
   }
   return (
     <div className="bg-white dark:bg-white">
