@@ -38,7 +38,7 @@ const LoginForm = () => {
         <div class="min-h-screen flex">
   <div class="flex-1 ...">
     <br></br><br></br><br></br><br></br><br></br><br></br>
-  <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
+  <div class="shadow-lg w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
     <h1 class="text-3xl font-semibold">Sign In</h1>
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white float-left">Your email</label>
