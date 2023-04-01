@@ -9,6 +9,9 @@ const Navbar = (props) => {
   const redirectToHome = () => {
     router.push('/')
   }
+  const redirectSettings = () => {
+    router.push('/settings')
+  }
     return (
         <nav class="bg-black dark:bg-gray-900 fixed w-full z-20 top-5 left-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -16,7 +19,15 @@ const Navbar = (props) => {
       <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo"/>
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
-  <div class="flex md:order-2">
+  <div class="flex md:order-2 space-x-3">
+    {
+      props.logged ? 
+      <>
+      <button onClick={redirectSettings} type="button" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">Settings</button>
+      </>
+    : 
+    <></>   
+    }
       <button onClick={props.onClickRedirect} type="button" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">{props.isLoggedIn}</button>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>

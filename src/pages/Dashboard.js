@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 export default function Dashboard() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
+  const [ logged, setLogged ] = useState(false);
   const cookies = new Cookies();
   const router = useRouter();
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Dashboard() {
     if(!token) {
       setIsLoggedIn("Sign In")
     } else {
+      setLogged(true);
       setIsLoggedIn("Sign Out")
       setLink("/Signout")
      }
@@ -25,7 +27,7 @@ export default function Dashboard() {
   return (
     <>
     <div class="bg-black dark:bg-black">
-      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
+      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
       <center>
         <br></br><br></br><br></br>
       <UserInfo />
