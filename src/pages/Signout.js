@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
 
-export default function Dashboard() {
+export default function Signout() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const cookies = new Cookies();
@@ -13,24 +13,14 @@ export default function Dashboard() {
   useEffect(() => {
     const token = cookies.get('user');
     if(!token) {
-      setIsLoggedIn("Sign In")
+      router.push('/Login')
     } else {
-      setIsLoggedIn("Sign Out")
-      setLink("/Signout")
+      cookies.remove('user');
+      router.push('/Login')
      }
   }, [])
-  const redirectDashboard = () => {
-    router.push(link)
-  }
   return (
     <>
-    <div class="bg-black dark:bg-black">
-      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
-      <center>
-        <br></br><br></br><br></br>
-      <UserInfo />
-    </center>
-    </div>
     </>
   )
 }

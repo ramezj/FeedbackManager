@@ -54,14 +54,6 @@ const UserInfo = () => {
     if (!user) return <><p>No Profile Data..</p></>
   return (
     <div>
-<div class="min-h-screen flex">
-  <div class="flex-1 ...">
-  <br></br><br></br>
-  <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
-  Hello {user.username} 👋, Welcome to your account!
-  </h1>
-  </div>
-  <div class="flex-1 ...">
     <br></br>
   {feedback.map((x) => {
             return (
@@ -76,8 +68,6 @@ const UserInfo = () => {
                 </>
             )
         })}
-  </div>
-</div>
     </div>
   )
 }
