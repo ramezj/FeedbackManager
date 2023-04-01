@@ -10,6 +10,9 @@ const LoginForm = () => {
     const [ password, setPassword ] = useState("");
     const [ error, setError ] = useState();
     const router = useRouter()
+    const redirectUserToLogin = () => {
+        router.push('/Register');
+    }
     const LoginUser = async () => {
         const payload = {
             email:email,
@@ -49,7 +52,7 @@ const LoginForm = () => {
         </div>
         <button onClick={LoginUser} class="shadow-lg shadow-indigo-500/50 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Login to your account</button>
         <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-            <b class="float-left">Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create an account</a></b>
+            <b class="float-left">Not registered? <a onClick={redirectUserToLogin} class="cursor-pointer text-blue-700 hover:underline dark:text-blue-500">Create an account</a></b>
             <br></br>
             <p>{error}</p>
         </div>

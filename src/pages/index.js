@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Cookies from 'universal-cookie';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
+import MVP from '../components/MVP';
 
 
 export default function Home() {
@@ -49,8 +50,10 @@ export default function Home() {
             </a>  
         </div>
         </div> 
+        <center>
+        <MVP/>
+        </center>
 </section>
-
     </div>
   )
 }
