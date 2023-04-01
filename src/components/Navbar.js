@@ -5,6 +5,10 @@ import { useRouter } from 'next/router'
 import { Input } from "@nextui-org/react";
 
 const Navbar = (props) => {
+  const router = useRouter();
+  const redirectToHome = () => {
+    router.push('/')
+  }
     return (
         <nav class="bg-black dark:bg-gray-900 fixed w-full z-20 top-5 left-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -22,7 +26,7 @@ const Navbar = (props) => {
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-black md:dark:bg-black dark:border-gray-700">
       <li>
-      <a href="#" class="duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-slate-300 md:p-0 md:dark:hover:text-blue-500 dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+      <a href="#" onClick={redirectToHome} class="duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-slate-300 md:p-0 md:dark:hover:text-blue-500 dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
       </li>
       <li>
         <a href="#" class="duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-slate-300 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Why?</a>

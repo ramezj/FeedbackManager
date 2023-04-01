@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Cookies from 'universal-cookie';
 import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
 
 
 export default function Home() {
@@ -37,8 +38,10 @@ export default function Home() {
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">Best realtime feedback & website analytics service.</h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-       <button onClick={redirectUser} class="bg-blue-700 hover:bg-blue-800 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">Get Started</button>   
-            <a href="#" class="shadow-xl inline-flex justify-center items-center px-7 py-3 text-base font-medium duration-300 text-center text-gray-900 rounded-lg border hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+       <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="bg-blue-700 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+        Get Started
+       </motion.button>     
+            <a href="#" class="shadow-xl inline-flex justify-center items-center px-7 py-3 text-base font-medium duration-300 text-center text-black rounded-lg bg-white dark:bg-white hover:bg-slate-400 duration-500 dark:text-black">
                 <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
                 Pricing
             </a>  
