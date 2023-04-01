@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const MVP = () => {
     return (
     <div> 
-<div class="shadow-xl max-w-sm p-6 bg-zinc-900 rounded-lg shadow dark:bg-gray-950">
+<div class="shadow-xl max-w-sm p-6 bg-zinc-900 rounded-2xl shadow dark:bg-gray-950">
     <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Whats on your mind? 🔨 </h5>
         <br></br>
