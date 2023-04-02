@@ -12,15 +12,37 @@ export default async function handler(req, res) {
     };
     const { id } = req.query;
     try {
-        const newFeedback = await prisma.feedback.create({
-            data:{
-                title:'test',
-                rating:req.body.rating,
-                description:req.body.description,
-                userId:id
+        const userExist = await prisma.user.findMany({
+            where:{
+                id:id
             }
-        })
-        res.status(200).json({newFeedback})
+        });
+        if (userExist) {
+            try {
+                const newFeedback = await prisma.feedback.create({
+                    data:{
+                        title:'test',
+                        rating:req.body.rating,
+                        description:req.body.description,
+                        userId:id
+                    }
+                })
+                res.status(200).json({
+                    ok:true,
+                    message:newFeedback
+                })
+            } catch (error) {
+                res.status(400).json({
+                    ok:false,
+                    message:error
+                })
+            }
+        } else {
+            return res.status(200).json({
+                ok:false,
+                messsage:error
+            })
+        }
     } catch (error) {
         res.status(400).json({error});
         console.error(error);

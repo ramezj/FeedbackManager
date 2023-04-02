@@ -6,7 +6,7 @@ import { Input } from "@nextui-org/react";
 import { motion } from 'framer-motion';
 
 const MVP = (props) => {
-    const [ rating, setRating ] = useState();
+    const [ rating, setRating ] = useState(2);
     const [ description, setDescription ] = useState("");
     const [ feedbackData, setFeedbackData ] = useState();
     const setBad = () => {
@@ -22,7 +22,7 @@ const MVP = (props) => {
         setRating(4)
     }
     const sendFeedback = async () => {
-        setsetFeedbackData("loading");
+        setFeedbackData("loading");
         const payload = {
             rating:rating,
             description:description,
@@ -36,7 +36,12 @@ const MVP = (props) => {
             body: JSON.stringify(payload)
         });
         const res = await response.json();
-        setFeedbackData(res);
+        console.log(res);
+        if(res.ok == true) {
+            setFeedbackData(true);
+        } else {
+            setFeedbackData(false);
+        }
     } 
     return (
     <div> 
@@ -65,7 +70,13 @@ const MVP = (props) => {
 <motion.button onClick={sendFeedback} whileHover={{scale: 1.1}} class="bg-blue-700 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
 Send Feedback 🔖
 </motion.button>
-{JSON.stringify(feedbackData)}
+<br></br>
+{
+    feedbackData
+    ? <motion.button class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Success</motion.button>
+    : <motion.button></motion.button>
+}
+<br></br>
 </motion.div>
 <br></br><br></br><br></br><br></br>
     </div>  
