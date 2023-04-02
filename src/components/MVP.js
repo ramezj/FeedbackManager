@@ -53,16 +53,16 @@ const MVP = (props) => {
 <textarea value={description} onChange={(e) => setDescription(e.target.value)} id="message" rows="4" class="shadow-xl block p-2.5 w-full text-sm text-white bg-zinc-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
 <br></br>
 <div class="space-x-4">
-<motion.button onClick={setBad} whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setBad} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
  😬
 </motion.button>
-<motion.button onClick={setNeutral} whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setNeutral} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
  😐
 </motion.button>
-<motion.button onClick={setGood} whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setGood} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
  😁
 </motion.button>
-<motion.button onClick={setVeryGood} whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setVeryGood} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
  🥰
 </motion.button>
 </div>
