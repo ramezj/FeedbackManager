@@ -19,10 +19,10 @@ const MVP = () => {
 <br></br>
 <div class="space-x-4">
 <motion.button whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
- 🥰
+ 😬
 </motion.button>
 <motion.button whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
- 🥰
+ 😐
 </motion.button>
 <motion.button whileHover={{scale: 1.1}} class="shadow-xl bg-slate-700 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
  😁
