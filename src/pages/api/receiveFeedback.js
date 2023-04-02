@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export default async function handler(req, res) {
     const prisma = new PrismaClient();
     const { body, method } = req;
-    if (method !== "GET") {
+    if (method !== "POST") {
         return res.status(405).json({
             message: "Method not allowed",
           });
@@ -15,8 +15,8 @@ export default async function handler(req, res) {
         const newFeedback = await prisma.feedback.create({
             data:{
                 title:'test',
-                rating:1,
-                description:"req.body.description",
+                rating:req.body.rating,
+                description:req.body.description,
                 userId:id
             }
         })
