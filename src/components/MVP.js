@@ -43,34 +43,15 @@ const MVP = (props) => {
             body: JSON.stringify(payload)
         });
         const res = await response.json();
-        console.log(res);
-        if(res.ok == true) {
-            setFeedbackData(true);
+        if (res.ok == true) {
+          setFeedbackData(true);
         } else {
-            setFeedbackData(false);
+          setFeedbackData(false);
         }
+        console.log(res);
     } 
     return (
     <div> 
-        {/* <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="shadow-2xl shadow-indigo-500/50 bg-blue-700 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
-          Send Feedback
-        </Menu.Button>
-      </div>
-
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-96 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-            <Menu.Item> */}
             <motion.div class="shadow-xl max-w-sm p-6 bg-zinc-900 rounded-2xl shadow dark:bg-gray-950">
     <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Whats on your mind? 🔨 </h5>
@@ -97,20 +78,14 @@ const MVP = (props) => {
 Send Feedback 🔖
 </motion.button>
 <br></br>
-{
+{/* {
     feedbackData
     ? <motion.button class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Success</motion.button>
     : <motion.button></motion.button>
-}
+} */}
+{feedbackData}
 <br></br>
  </motion.div>
-            {/* </Menu.Item>
-        
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu> * */}
-
 <br></br><br></br><br></br><br></br>
 </div>
 

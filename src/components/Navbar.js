@@ -67,7 +67,7 @@ const NavbarComponent = (props) => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Home</a></li>
-        <li><a>Docs</a></li>
+        <li><a>API Docs</a></li>
         <li><a>Pricing</a></li>
       </ul>
     </div>
@@ -75,9 +75,9 @@ const NavbarComponent = (props) => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Docs</a></li>
-      <li><a>Pricing</a></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md" onClick={redirectHome}><a>Home</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md" onClick={redirectHome}><a>API Docs</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md" onClick={redirectHome}><a>Pricing</a></button></li>
       
     </ul>
   </div>
@@ -91,7 +91,7 @@ const NavbarComponent = (props) => {
   <MVP userId={"64242d7de859353bfa82d4fa"}/>  
   </ul>
 </div> */}
-<button onClick={props.onClickRedirect} type="button" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">{props.isLoggedIn}</button>
+<button onClick={props.onClickRedirect} type="button" className="ml-1 btn btn-ghost normal-case text-lg">{props.isLoggedIn}</button>
   </div>
 </div>
 </>
