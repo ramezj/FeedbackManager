@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import NavbarComponent from '../components/Navbar'
 import "flowbite";
+import  Footer  from '../components/Footer';
 
 export default function Dashboard() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
@@ -34,6 +35,13 @@ export default function Dashboard() {
       <UserInfo />
     </center>
     </div>
+    <br></br><br></br><br></br>
+    <br></br><br></br><br></br>
+    <br></br><br></br><br></br>
+    <br></br><br></br><br></br>
+    <br></br><br></br><br></br>
+    <br></br><br></br><br></br>
+    <Footer/>
     </>
   )
 }
