@@ -10,11 +10,11 @@ export default function App({ Component, pageProps }) {
   return (
     <AnimatePresence mode='wait'>
     <motion.div className="bg-black" 
-    initial="initialState"
-    animate="animateState"
-    exit="exitState"
+    initial={{opacity: 0 }}
+    animate={{opacity: 1 }}
+    exit={{opacity: 0 }}
     transition={{
-      duration:0.75
+      duration:0.80
     }}
     variants={{
       initialState: {

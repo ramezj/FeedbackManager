@@ -29,7 +29,14 @@ export default function Dashboard() {
   }
   return (
     <>
-    <motion.div class="bg-black dark:bg-black" exit={{opacity:0}}>
+    <motion.div 
+    initial={{opacity: 0 }}
+    animate={{opacity: 1 }}
+    exit={{opacity: 0 }}
+    transition={{
+      duration:0.80
+    }}
+    >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
       <center>
         <br></br><br></br><br></br>

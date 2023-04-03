@@ -7,6 +7,7 @@ import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
 import SyntaxHighlighter from "react-syntax-highlighter";
+import { motion } from "framer-motion";
 // import { shadesOfPurple } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function Documentation() {
@@ -31,7 +32,14 @@ export default function Documentation() {
   }
   return (
     <>
-    <div class="bg-black dark:bg-black">
+    <motion.div 
+    initial={{opacity: 0 }}
+    animate={{opacity: 1 }}
+    exit={{opacity: 0 }}
+    transition={{
+      duration:0.80
+    }}
+    >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
       <center>
         <br></br><br></br><br></br>
@@ -41,7 +49,7 @@ export default function Documentation() {
         </SyntaxHighlighter>
         </div>
     </center>
-    </div>
+    </motion.div>
     <br></br><br></br><br></br>
     <br></br><br></br><br></br>
     <br></br><br></br><br></br>

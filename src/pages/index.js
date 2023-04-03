@@ -31,7 +31,14 @@ export default function Home() {
     router.push(link)
   }
   return (
-    <motion.div exit={{opacity:0}}>
+    <motion.div 
+    initial={{opacity: 0 }}
+    animate={{opacity: 1 }}
+    exit={{opacity: 0 }}
+    transition={{
+      duration:0.80
+    }}
+    >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
       <section class="dark:bg-gray-900 dark:text-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
