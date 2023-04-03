@@ -8,7 +8,6 @@ import GlowAlert from '../components/GlowAlert';
 import Footer from '../components/Footer';
 import "flowbite"
 
-
 export default function Home() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
@@ -32,7 +31,7 @@ export default function Home() {
     router.push(link)
   }
   return (
-    <div>
+    <motion.div exit={{opacity:0}}>
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
       <section class="dark:bg-gray-900 dark:text-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
@@ -53,6 +52,6 @@ export default function Home() {
         </center>
 </section>
 <Footer />
-    </div>
+    </motion.div>
   )
 }

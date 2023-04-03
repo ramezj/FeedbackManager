@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
+import { motion } from 'framer-motion';
 
 export default function Dashboard() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
@@ -28,13 +29,13 @@ export default function Dashboard() {
   }
   return (
     <>
-    <div class="bg-black dark:bg-black">
+    <motion.div class="bg-black dark:bg-black" exit={{opacity:0}}>
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
       <center>
         <br></br><br></br><br></br>
       <UserInfo />
     </center>
-    </div>
+    </motion.div>
     <br></br><br></br><br></br>
     <br></br><br></br><br></br>
     <br></br><br></br><br></br>
