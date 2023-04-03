@@ -3,7 +3,7 @@ import UserInfo from '../components/UserInfo';
 import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
-import Navbar from '../components/Navbar'
+import NavbarComponent from '../components/Navbar'
 import "flowbite";
 
 export default function Dashboard() {
@@ -28,7 +28,7 @@ export default function Dashboard() {
   return (
     <>
     <div class="bg-black dark:bg-black">
-      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
+      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
       <center>
         <br></br><br></br><br></br>
       <UserInfo />

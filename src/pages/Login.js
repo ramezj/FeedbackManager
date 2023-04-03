@@ -26,7 +26,7 @@ export default function Login() {
   }
   return (
     <>
-   <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
+   <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
     <center>
       <LoginForm />
     </center>

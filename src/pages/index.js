@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Cookies from 'universal-cookie';
-import Navbar from '../components/Navbar';
+import NavbarComponent from '../components/Navbar';
 import { motion } from 'framer-motion';
 import MVP from '../components/MVP';
 import GlowAlert from '../components/GlowAlert';
@@ -33,8 +33,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
-<br></br><br></br><br></br>
+      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
       <section class="dark:bg-gray-900 dark:text-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
     <GlowAlert />
