@@ -37,7 +37,6 @@ export default function Documentation() {
         <br></br><br></br><br></br>
         <div class="w-96 rounded-lg">
         <SyntaxHighlighter language="javascript" style={shadesOfPurple}>
-            
             {codeString}        
         </SyntaxHighlighter>
         </div>
