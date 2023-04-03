@@ -10,9 +10,7 @@ const Navbar = (props) => {
   const redirectToHome = () => {
     router.push('/')
   }
-  const redirectSettings = () => {
-    router.push('/settings')
-  }
+
   const redirectHome = () => {
     router.push('/')
   }
@@ -26,20 +24,11 @@ const Navbar = (props) => {
   <div class="flex md:order-2 space-x-3">
   
 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-  Send Feedback 
+  Send Feedback! 
   </button>
 <div id="dropdown" class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-96 dark:bg-gray-700">
 <MVP userId={"64242d7de859353bfa82d4fa"}/>   
 </div>
-
-    {
-      props.logged ? 
-      <>
-      <button onClick={redirectSettings} type="button" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">Settings</button>
-      </>
-    : 
-    <></>   
-    }
       <button onClick={props.onClickRedirect} type="button" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">{props.isLoggedIn}</button>
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Open main menu</span>

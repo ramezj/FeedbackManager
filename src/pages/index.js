@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import MVP from '../components/MVP';
 import GlowAlert from '../components/GlowAlert';
 import Footer from '../components/Footer';
-import 'flowbite';
+import "flowbite"
 
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
+      <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
 <br></br><br></br><br></br>
       <section class="dark:bg-gray-900 dark:text-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">

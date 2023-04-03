@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
+import "flowbite";
 
 export default function Dashboard() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
