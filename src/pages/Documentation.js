@@ -7,7 +7,7 @@ import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { shadesOfPurple } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+// import { shadesOfPurple } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function Documentation() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
@@ -36,7 +36,7 @@ export default function Documentation() {
       <center>
         <br></br><br></br><br></br>
         <div class="w-96 rounded-lg">
-        <SyntaxHighlighter language="javascript" style={shadesOfPurple}>
+        <SyntaxHighlighter language="javascript">
             {codeString}        
         </SyntaxHighlighter>
         </div>
