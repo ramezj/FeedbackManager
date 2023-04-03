@@ -16,7 +16,7 @@ export default function Signout() {
       router.push('/Login')
     } else {
       cookies.remove('user');
-      router.push('/Login')
+      router.push('/')
      }
   }, [])
   return (
