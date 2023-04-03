@@ -3,6 +3,7 @@ import useSWR from 'swr';
 import Cookies from 'universal-cookie';
 import { useRouter } from 'next/router'
 import { Input } from "@nextui-org/react";
+import MVP from './MVP'
 
 const Navbar = (props) => {
   const router = useRouter();
@@ -20,6 +21,14 @@ const Navbar = (props) => {
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div class="flex md:order-2 space-x-3">
+  
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  Send Feedback 
+  </button>
+<div id="dropdown" class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-96 dark:bg-gray-700">
+<MVP userId={"64242d7de859353bfa82d4fa"}/>   
+</div>
+
     {
       props.logged ? 
       <>
@@ -37,10 +46,8 @@ const Navbar = (props) => {
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-black md:dark:bg-black dark:border-gray-700">
       <li>
+        
       <a href="#" onClick={redirectToHome} class="duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-slate-300 md:p-0 md:dark:hover:text-blue-500 dark:text-slate-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
-      </li>
-      <li>
-        <a href="#" class="duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-slate-300 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Why?</a>
       </li>
       <li>
         <a href="#" class="duration-500 block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-slate-300 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Docs</a>
