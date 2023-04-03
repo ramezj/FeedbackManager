@@ -23,7 +23,7 @@ export default function Home() {
     if(!token) {
       setIsLoggedIn("Sign In")
     } else {
-      setIsLoggedIn("Dashboard");
+      setIsLoggedIn("App");
       setLogged(true);
       setLink("/Dashboard")
     }

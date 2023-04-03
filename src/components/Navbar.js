@@ -82,20 +82,15 @@ const NavbarComponent = (props) => {
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
-  {/* <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700" type="button">
-    Try Demo 
-  </button>
-<div id="dropdown" class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-96 dark:bg-gray-700">
-<MVP userId={"64242d7de859353bfa82d4fa"}/>   
-</div> */}
-<div className="dropdown dropdown-end">
+
+{/* <div className="dropdown dropdown-end">
   <button class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">
   <label tabIndex={0}>Send Feedback</label>
   </button>
   <ul tabIndex={0} className="dropdown-content menu p-2 shadow rounded-box w-max ">
   <MVP userId={"64242d7de859353bfa82d4fa"}/>  
   </ul>
-</div>
+</div> */}
 <button onClick={props.onClickRedirect} type="button" class="duration-500 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700">{props.isLoggedIn}</button>
   </div>
 </div>
