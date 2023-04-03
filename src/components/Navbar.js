@@ -18,7 +18,9 @@ const NavbarComponent = (props) => {
   const redirectHome = () => {
     router.push('/')
   }
-
+  const redirectDocs = () => {
+    router.push('/Documentation')
+  }
 
     return (
 //         <nav class="bg-black dark:bg-gray-900 fixed w-full z-20 top-0 left-0">
@@ -75,9 +77,9 @@ const NavbarComponent = (props) => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><button class="ml-1 btn btn-ghost normal-case text-md" onClick={redirectHome}><a>Home</a></button></li>
-      <li><button class="ml-1 btn btn-ghost normal-case text-md" onClick={redirectHome}><a>API Docs</a></button></li>
-      <li><button class="ml-1 btn btn-ghost normal-case text-md" onClick={redirectHome}><a>Pricing</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectHome}><a>Home</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectDocs}><a>API Docs</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectHome}><a>Pricing</a></button></li>
       
     </ul>
   </div>
