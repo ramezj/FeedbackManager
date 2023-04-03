@@ -55,6 +55,7 @@ export default function Home() {
         </div>
         </div> 
         <center>
+          
         <MVP userId={"64242d7de859353bfa82d4fa"}/>
         </center>
 </section>
