@@ -35,17 +35,27 @@ const RegisterForm = () => {
     } 
 
     return (
-    <div>
-    <br></br>
-    <input type="text" placeholder="username" value={username} onChange={(e) => {setUsername(e.target.value)}}/>
-    <br></br><br></br>
-    <input type="text" placeholder="email" value={email} onChange={(e) => {setEmail(e.target.value)}}/>
-    <br></br><br></br>
-    <input type="password" placeholder="password" value={password} onChange={(e) => {setPassword(e.target.value)}}/>
-    <br></br>
-    <button onClick={RegisterUser}> Register </button>
-    <p>{error}</p>
-    </div>
+        <div>
+        <div class="shadow-lg w-full max-w-sm p-4 bg-zinc-900 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
+          <h1 class="text-3xl font-semibold text-white">Sign Up</h1>
+          <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your Username</label>
+                  <input type="email" name="email" value={username} onChange={(e) => {setUsername(e.target.value)}} class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="name@company.com" />
+              </div>
+              <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your email</label>
+                  <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="name@company.com" />
+              </div>
+              <div>
+                  <label for="password" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your password</label>
+                  <input type="password" name="password" id="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder="••••••••" class="shadow shadow-lg bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+              </div>
+              <button onClick={RegisterUser} class="shadow-lg shadow-indigo-500/50 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Create Account</button>
+              <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                  <p>{error}</p>
+              </div>
+              </div>
+              </div>
   )
 }
 

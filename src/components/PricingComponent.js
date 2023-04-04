@@ -43,7 +43,7 @@ export default function PricingComponent() {
                   <span className="text-sm font-semibold leading-6 tracking-wide text-white">USD</span>
                 </p>
                 <a
-                  href="#"
+                  href="https://lunix.lemonsqueezy.com/checkout/buy/a1971243-711f-4546-9ac3-24754c09392c"
                   className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Get access

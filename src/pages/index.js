@@ -14,9 +14,6 @@ export default function Home() {
   const [ logged, setLogged ] = useState(false);
   const cookies = new Cookies();
   const router = useRouter()
-  const redirectUser = () => {
-    router.push('/Login')
-  }
   useEffect(() => {
     const token = cookies.get('user');
     if(!token) {
@@ -29,6 +26,13 @@ export default function Home() {
   }, [])
   const redirectDashboard = () => {
     router.push(link)
+  }
+  const redirectUser = () => {
+    if(logged) {
+      router.push("/Dashboard")
+    } else {
+      router.push('/Login')
+    }
   }
   return (
     <motion.div 
