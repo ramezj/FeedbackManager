@@ -40,7 +40,7 @@ const LoginForm = () => {
     return (
     <div>
   <div class="shadow-lg w-full max-w-sm p-4 bg-zinc-900 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
-    <h1 class="text-3xl font-semibold text-white">Log In</h1>
+    <h1 class="text-3xl font-semibold text-white">Sign In</h1>
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your email</label>
             <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="name@company.com" />
@@ -49,7 +49,7 @@ const LoginForm = () => {
             <label for="password" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your password</label>
             <input type="password" name="password" id="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder="••••••••" class="shadow shadow-lg bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
         </div>
-        <button onClick={LoginUser} class="shadow-lg shadow-indigo-500/50 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Login to your account</button>
+        <button onClick={LoginUser} class="shadow-lg shadow-indigo-500/50 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Login to your account</button>
         <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
             <b class="float-left">Not registered? <a onClick={redirectUserToLogin} class="cursor-pointer text-blue-700 hover:underline dark:text-blue-500">Create an account</a></b>
             <br></br>
