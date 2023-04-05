@@ -7,7 +7,8 @@ import { useRouter } from 'next/router'
 const UserInfo = () => {
     const [ user, setUser ] = useState(null);
     const [ isLoading, setLoading ] = useState(false);
-    const [ feedback, setFeedback ] = useState([])
+    const [ feedback, setFeedback ] = useState([]);
+    const [ projects, setProjects ] = useState([]);
     const cookies = new Cookies();
     const router = useRouter()
     useEffect(() => {
@@ -32,7 +33,8 @@ const UserInfo = () => {
                         return router.push("/Login")
                     }
                     setUser(res.user);
-                    setFeedback(res.feedbacks);
+                    setFeedback(res.user.feedbacks);
+                    setProjects(res.user.projects)
                     setLoading(false)
                     console.log(res);
             }
@@ -55,6 +57,16 @@ const UserInfo = () => {
   return (
     <div>
     <br></br>
+    {
+            projects.map((y) => {
+                return (
+                    <>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">Project Id : {y.id}</span>
+                    </>
+                )
+            })
+        }
+        <br></br><br></br>
   {feedback.map((x) => {
             return (
                 <>
@@ -68,6 +80,7 @@ const UserInfo = () => {
                 </>
             )
         })}
+        <br></br>
     </div>
   )
 }

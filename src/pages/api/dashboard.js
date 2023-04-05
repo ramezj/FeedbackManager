@@ -29,23 +29,12 @@ export default async function handler(req, res) {
                          id:verifyToken.id
                     },
                     include: {
-                        projects:true
+                        projects:true,
+                        feedbacks:true
                     }
                 })
-                const feedbacks = await prisma.feedback.findMany({
-                    where: {
-                        userId:verifyToken.id
-                    }
-                })
-                if (!feedbacks) {
-                    console.log("Backend Response: No feedback Found.")
-                    return res.status(200).json({
-                        message:"Backend Response: No feedback Found."
-                    })
-                }
                 return res.status(200).json({
-                    user,
-                    feedbacks
+                    user
                 })
             }   
         } catch (error) {

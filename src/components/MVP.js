@@ -15,6 +15,7 @@ function classNames(...classes) {
 const MVP = (props) => {
     const [ rating, setRating ] = useState(2);
     const [ description, setDescription ] = useState("");
+    const [ projectId, setProjectId ] = useState("");
     const [ feedbackData, setFeedbackData ] = useState();
     const [ loading, setLoading ] = useState();
     const setBad = () => {
@@ -34,6 +35,7 @@ const MVP = (props) => {
         const payload = {
             rating:rating,
             description:description,
+            projectId: props.projectId
         }
         const response = await fetch(`/api/receiveFeedback?id=${props.userId}`, {
             method:'POST',

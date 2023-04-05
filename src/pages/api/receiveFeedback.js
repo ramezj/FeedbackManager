@@ -24,7 +24,8 @@ export default async function handler(req, res) {
                         title:'test',
                         rating:req.body.rating,
                         description:req.body.description,
-                        userId:id
+                        userId:id,
+                        projectId:req.body.projectId
                     }
                 })
                 res.status(200).json({
