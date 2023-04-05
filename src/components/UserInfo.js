@@ -3,6 +3,7 @@ import useSWR from 'swr';
 import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion';
 
 const UserInfo = () => {
     const [ user, setUser ] = useState(null);
@@ -70,15 +71,19 @@ const UserInfo = () => {
   {feedback.map((x) => {
             return (
                 <>
-    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <motion.div 
+    whileHover={{
+        scale:1.1
+    }}
+    class="max-w-sm p-6 bg-zinc-900 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
     <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{x.projectId}</span>
         <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">{x.title}</span>
             <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{x.title}</h5> 
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{x.title}</h5> 
             </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{x.description}</p>
+            <p class="mb-3 font-normal text-white dark:text-gray-400">{x.description}</p>
             
-    </div>
+    </motion.div>
                 </>
             )
         })}
