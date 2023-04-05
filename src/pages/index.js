@@ -12,17 +12,40 @@ export default function Home() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
+  const [ username, setUsername ] = useState();
   const cookies = new Cookies();
   const router = useRouter()
   useEffect(() => {
-    const token = cookies.get('user');
-    if(!token) {
-      setIsLoggedIn("Sign In")
-    } else {
-      setIsLoggedIn("Dashboard");
-      setLogged(true);
-      setLink("/Dashboard")
+    const TokenVerification = async () => {
+      const token = cookies.get('user');
+      if(!token) {
+        setIsLoggedIn("Sign In")
+      } else {
+        try {
+          const response = await fetch('/api/dashboard', {
+            method:'GET',
+            headers: {
+                "Content-Type": "application/json",
+                credentials: "same-origin",
+                "credentials":"same-origin"
+            },
+        })
+        const res = await response.json();
+        setUsername(res.user.username)
+        if(res.user == null || res.user == "null") {
+            console.log("User token is null, redirecting.")
+            return router.push("/Login")
+        }
+        } catch (error) {
+          
+        }
+        setLogged(true);
+        setIsLoggedIn("Sign Out")
+        setLink("/Signout")
+       }
     }
+
+     TokenVerification();
   }, [])
   const redirectDashboard = () => {
     router.push(link)
@@ -43,7 +66,7 @@ export default function Home() {
       duration:0.80
     }}
     >
-      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
+      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <section class="dark:bg-gray-900 dark:text-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
     <GlowAlert />
@@ -59,7 +82,6 @@ export default function Home() {
         </div>
         </div> 
         <center>
-          
         <MVP userId={"642ccebbb1119d20b8d36b18"} projectId={"642ccebcb1119d20b8d36b19"}/>
         </center>
 </section>
