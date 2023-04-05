@@ -36,7 +36,8 @@ export default async function handler(req, res) {
                     data: {
                         username:req.body.username,
                         email:req.body.email,
-                        password:hashedPassword
+                        password:hashedPassword,
+                        active:false
                     }
                 });
                 const createFeedbacks = await prisma.feedback.create({
