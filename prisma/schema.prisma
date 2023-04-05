@@ -14,8 +14,16 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   feedbacks Feedback[]
+  projects Project[]
   active Boolean
-  
+
+}
+model Project {
+  id String @id @default(auto()) @map("_id") @db.ObjectId 
+  createdAt DateTime @default(now())
+  userId String
+  user User @relation(fields: [userId], references: [id])
+  feedbacks Feedback[]
 }
 model Feedback {
   id  String @id @default(auto()) @map("_id") @db.ObjectId
@@ -25,5 +33,7 @@ model Feedback {
   createdAt DateTime @default(now())
   userId String
   user User @relation(fields: [userId], references: [id])
+  projectId String
+  project Project @relation(fields: [projectId], references: [id])
 }
 

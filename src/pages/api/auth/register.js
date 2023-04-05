@@ -37,19 +37,24 @@ export default async function handler(req, res) {
                         username:req.body.username,
                         email:req.body.email,
                         password:hashedPassword,
-                        active:false
+                        active:false,
                     }
                 });
+                const createProject = await prisma.project.create({
+                    data:{
+                        userId:createUser.id
+                    }
+                    
+                })
                 const createFeedbacks = await prisma.feedback.create({
                     data: {
                         title:"Welcome!",
                         rating:5,
                         description:`Hello ${createUser.username}, we are glad you decided to use FeedbackManager, Let's get you started!`,
-                        userId:createUser.id
+                        userId:createUser.id,
+                        projectId:createProject.id
                     }
                 })
-                console.log(createUser);
-                console.log(createFeedbacks);
                 const token = await jwt.sign({id: createUser.id}, process.env.JWT_SECRET);
                 return res.status(200).json({
                     ok:true,
