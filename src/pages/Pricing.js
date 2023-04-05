@@ -13,6 +13,7 @@ export default function Pricing() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
+  const [ username, setUsername ] = useState();
   const cookies = new Cookies();
   const router = useRouter();
   useEffect(() => {
@@ -20,6 +21,8 @@ export default function Pricing() {
     if(!token) {
       setIsLoggedIn("Sign In")
     } else {
+      const tokenUsername = cookies.get("username");
+      setUsername(tokenUsername);
       setLogged(true);
       setIsLoggedIn("Dashboard")
       setLink("/Dashboard")
@@ -38,7 +41,7 @@ export default function Pricing() {
       duration:0.80
     }}
     >
-      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
+      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
         <br></br><br></br><br></br>
         <div className="mx-auto max-w-2xl sm:text-center">

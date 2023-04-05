@@ -36,7 +36,8 @@ export default async function handler(req, res) {
                 const token = await jwt.sign({id: emailExist.id}, process.env.JWT_SECRET);
                 return res.status(200).json({
                     ok:true,
-                    token:token
+                    token:token,
+                    username:emailExist.username
                 })
             } else {
                 return res.status(400).json({

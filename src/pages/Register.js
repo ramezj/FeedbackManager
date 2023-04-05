@@ -13,6 +13,7 @@ export default function Register() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
+  const [ username, setUsername ] = useState();
   const cookies = new Cookies();
   const router = useRouter();
   useEffect(() => {
@@ -20,6 +21,8 @@ export default function Register() {
     if(!token) {
       setIsLoggedIn("Sign In")
     } else {
+      const tokenUsername = cookies.get("username");
+      setUsername(tokenUsername);
       setLogged(true);
       setIsLoggedIn("Sign Out")
       setLink("/Signout")
@@ -37,7 +40,7 @@ export default function Register() {
       duration:0.80
     }}
     >
-      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged}/>
+      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
         <br></br><br></br>
       <RegisterForm />

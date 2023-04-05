@@ -11,10 +11,15 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const NavbarComponent = (props) => {
   const router = useRouter();
+  const redirectDashboard = () => {
+    router.push('/Dashboard')
+  }
   const redirectToHome = () => {
     router.push('/')
   }
-
+  const redirectSignOut = () => {
+    router.push('/Signout')
+  }
   const redirectHome = () => {
     router.push('/')
   }
@@ -59,13 +64,15 @@ const NavbarComponent = (props) => {
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
         <li>
+          <button onClick={redirectDashboard}>
           <a className="justify-between">
-            Profile
+            Dashboard
             <span className="badge">New</span>
           </a>
+          </button>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><button onClick={redirectSignOut}><a>Logout</a></button></li>
       </ul>
     </div>
   </div>

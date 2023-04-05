@@ -21,24 +21,8 @@ export default function Home() {
       if(!token) {
         setIsLoggedIn("Sign In")
       } else {
-        try {
-          const response = await fetch('/api/dashboard', {
-            method:'GET',
-            headers: {
-                "Content-Type": "application/json",
-                credentials: "same-origin",
-                "credentials":"same-origin"
-            },
-        })
-        const res = await response.json();
-        setUsername(res.user.username)
-        if(res.user == null || res.user == "null") {
-            console.log("User token is null, redirecting.")
-            return router.push("/Login")
-        }
-        } catch (error) {
-          
-        }
+        const tokenUsername = cookies.get("username");
+        setUsername(tokenUsername);
         setLogged(true);
         setIsLoggedIn("Sign Out")
         setLink("/Signout")

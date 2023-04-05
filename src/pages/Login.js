@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import LoginForm from '../components/LoginForm';
-import Navbar from '../components/Navbar';
+import NavbarComponent from '../components/Navbar';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import Cookies from 'universal-cookie';
@@ -12,6 +12,7 @@ export default function Login() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
+  const [ username, setUsername ] = useState();
   const cookies = new Cookies();
   const router = useRouter();
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function Login() {
     if(!token) {
       setIsLoggedIn("Sign In")
     } else {
+      const tokenUsername = cookies.get("username");
+      setUsername(tokenUsername); 
       setLogged(true);
       setIsLoggedIn("Sign Out")
       setLink("/Signout")
@@ -36,7 +39,7 @@ export default function Login() {
       duration:0.80
     }}
     >
-   <Navbar onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn}/>
+   <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
     <center>
       <br></br><br></br>
       <LoginForm />

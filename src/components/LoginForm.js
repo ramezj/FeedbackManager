@@ -35,7 +35,8 @@ const LoginForm = () => {
         }
         if (res.ok == true) {
             setResponse("Signed In Successfully, Redirecting!")
-            cookies.set('user', res.token);
+            cookies.set('user' , res.token);
+            cookies.set('username' , res.username)
             router.push('/Dashboard')
         }
         console.log(res);
