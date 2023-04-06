@@ -20,6 +20,12 @@ const NavbarComponent = (props) => {
   const redirectSignOut = () => {
     router.push('/Signout')
   }
+  const redirectSignIn = () => {
+    router.push('/Login')
+  }
+  const redirectSignUp = () => {
+    router.push('/Register')
+  }
   const redirectHome = () => {
     router.push('/')
   }
@@ -58,17 +64,6 @@ const NavbarComponent = (props) => {
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
-  {/* <div className="dropdown dropdown-end">
-      <label tabIndex={0}>
-        <div className="">
-        <button type="button" className="ml-1 btn btn-ghost normal-case text-lg">Feedback</button>
-        </div>
-      </label>
-      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content rounded-box w-96">
-       <MVP/>
-      </ul>
-    </div>
-  </div> */}
   <div className="dropdown dropdown-end">
       <label tabIndex={0}>
         <div className="">
@@ -118,7 +113,8 @@ const NavbarComponent = (props) => {
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
-<button onClick={props.onClickRedirect} type="button" className="ml-1 btn btn-ghost normal-case text-lg">{props.isLoggedIn}</button>
+  <button onClick={redirectSignIn} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg">Sign In</button>
+<button onClick={redirectSignUp} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg bg-blue-700 hover:bg-blue-800">Sign Up</button>
   </div>
 </div>
 </>

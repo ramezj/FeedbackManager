@@ -40,7 +40,7 @@ export default function Register() {
       duration:0.80
     }}
     >
-      <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
+      <NavbarComponent logged={logged} username={username}/>
       <center>
         <br></br><br></br>
       <RegisterForm />
