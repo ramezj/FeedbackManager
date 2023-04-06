@@ -7,8 +7,9 @@ import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
 import { motion } from 'framer-motion';
+import SettingsComponent from "../components/SettingsComponent";
 
-export default function Dashboard() {
+export default function Settings() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
@@ -46,8 +47,10 @@ export default function Dashboard() {
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
-        <br></br><br></br><br></br>
-      <UserInfo />
+        <br></br><br></br>
+        <button class="text-white bg-zinc-900 shadow shadow-xl font-semibold focus:ring-4 focus:outline-none font-xl rounded-lg text-2xl sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:focus:ring-blue-800">User Settings</button>
+        <br></br><br></br>
+        <SettingsComponent />
     </center>
     </motion.div>
     <br></br><br></br><br></br>

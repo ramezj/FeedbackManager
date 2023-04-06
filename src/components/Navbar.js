@@ -7,7 +7,7 @@ import MVP from './MVP'
 import "flowbite";
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const NavbarComponent = (props) => {
   const router = useRouter();
@@ -29,7 +29,9 @@ const NavbarComponent = (props) => {
   const redirectPricing = () => {
     router.push('/Pricing')
   }
-  
+  const redirectSettings = () => {
+    router.push('/Settings');
+  }
   if(props.logged == true) {
     return (
       <>
@@ -56,10 +58,21 @@ const NavbarComponent = (props) => {
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
+  {/* <div className="dropdown dropdown-end">
+      <label tabIndex={0}>
+        <div className="">
+        <button type="button" className="ml-1 btn btn-ghost normal-case text-lg">Feedback</button>
+        </div>
+      </label>
+      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content rounded-box w-96">
+       <MVP/>
+      </ul>
+    </div>
+  </div> */}
   <div className="dropdown dropdown-end">
       <label tabIndex={0}>
         <div className="">
-        <button type="button" className="ml-1 btn btn-ghost normal-case text-lg">{props.username}</button>
+        <button type="button" className="ml-1 btn btn-ghost normal-case text-lg">{props.username} <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
@@ -71,12 +84,12 @@ const NavbarComponent = (props) => {
           </a>
           </button>
         </li>
-        <li><a>Settings</a></li>
+        <li><button onClick={redirectSettings}><a>Settings</a></button></li>
         <li><button onClick={redirectSignOut}><a>Logout</a></button></li>
       </ul>
     </div>
   </div>
-</div>
+  </div>
       </>
     )
   }

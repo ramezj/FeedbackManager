@@ -7,8 +7,12 @@ import MVP from '../components/MVP';
 import GlowAlert from '../components/GlowAlert';
 import Footer from '../components/Footer';
 import "flowbite"
+import { useScroll, animated, } from '@react-spring/web'
+
 
 export default function Home() {
+  const [content, set] = useState(2);
+  const scrollIntertia = 70;
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
