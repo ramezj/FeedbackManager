@@ -4,6 +4,9 @@ import "flowbite";
 import { AnimatePresence } from "framer-motion";
 import { motion } from 'framer-motion';
 import { useRouter } from "next/router";
+import { Analytics } from '@vercel/analytics/react';
+
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
@@ -28,6 +31,7 @@ export default function App({ Component, pageProps }) {
     }}
     >
       <Component {...pageProps} />
+      <Analytics/>
     </motion.div>
     </AnimatePresence>
   )
