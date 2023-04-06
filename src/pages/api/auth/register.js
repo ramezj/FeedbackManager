@@ -58,7 +58,8 @@ export default async function handler(req, res) {
                 const token = await jwt.sign({id: createUser.id}, process.env.JWT_SECRET);
                 return res.status(200).json({
                     ok:true,
-                    token:token
+                    token:token,
+                    username: createUser.username
                 })
                 } catch (error) {
                     console.log(error);
