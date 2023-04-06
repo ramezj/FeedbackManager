@@ -111,3 +111,49 @@ a {
     color-scheme: dark;
   }
 }
+
+@keyframes checkmark {
+  from {
+    stroke-dashoffset: 100px;
+  }
+
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes checkmark-circle {
+  from {
+    stroke-dashoffset: 480px;
+  }
+
+  to {
+    stroke-dashoffset: 960px;
+  }
+}
+
+@keyframes colored-circle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.checkmark {
+  display: inline;
+}
+
+.checkmark polyline {
+  animation: checkmark 0.25s ease 0.7s backwards;
+}
+
+.checkmark circle {
+  animation: checkmark-circle 0.6s ease backwards;
+}
+
+.checkmark circle:last-of-type {
+  animation: colored-circle 0.6s ease 0.7s backwards;
+}
