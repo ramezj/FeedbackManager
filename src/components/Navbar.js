@@ -114,7 +114,7 @@ const NavbarComponent = (props) => {
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
   <button onClick={redirectSignIn} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg">Sign In</button>
-<button onClick={redirectSignUp} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 ">Sign Up</button>
+<button onClick={redirectSignUp} type="button" className="text-white shadow shadow-lg ml-1 btn bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 normal-case text-lg">Sign Up</button>
   </div>
 </div>
 </>
