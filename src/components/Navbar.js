@@ -67,7 +67,7 @@ const NavbarComponent = (props) => {
   <div className="dropdown dropdown-end">
       <label tabIndex={0}>
         <div className="">
-        <button type="button" className="ml-1 btn btn-ghost normal-case text-lg">{props.username} <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+        <button type="button" className="ml-1 btn btn-ghost normal-case text-lg"><b className="bg-gradient-to-r from-green-400 to-blue-500 inline-block text-transparent bg-clip-text">{props.username}</b><svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
@@ -114,7 +114,7 @@ const NavbarComponent = (props) => {
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
   <button onClick={redirectSignIn} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg">Sign In</button>
-<button onClick={redirectSignUp} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg bg-blue-700 hover:bg-blue-800">Sign Up</button>
+<button onClick={redirectSignUp} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 ">Sign Up</button>
   </div>
 </div>
 </>
