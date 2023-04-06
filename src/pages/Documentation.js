@@ -17,7 +17,8 @@ export default function Documentation() {
   const [ username, setUsername ] = useState("");
   const cookies = new Cookies();
   const router = useRouter();
-  const codeString = `import feedbacker from "feedbacker"`
+  const codeString1 = `npm i feedbacker`
+  const codeString2 = `yarn add feedbacker`
   useEffect(() => {
     const TokenVerification = async () => {
       const token = cookies.get('user');
@@ -51,11 +52,11 @@ export default function Documentation() {
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
         <br></br><br></br><br></br>
-        <div class="w-96 rounded-lg">
-        <SyntaxHighlighter language="javascript">
-            {codeString}        
+    <div class="w-96">
+    <SyntaxHighlighter language="javascript">
+            {codeString1}    
         </SyntaxHighlighter>
-        </div>
+</div>
     </center>
     </motion.div>
     <br></br><br></br><br></br>
