@@ -18,17 +18,20 @@ const MVP = (props) => {
     const [ projectId, setProjectId ] = useState("");
     const [ feedbackData, setFeedbackData ] = useState();
     const [ loading, setLoading ] = useState();
-    const setBad = () => {
+    const setAwful = () => {
         setRating(1)
+    }
+    const setBad = () => {
+        setRating(2)
     } 
     const setNeutral = () => {
-        setRating(2)
-    }
-    const setGood = () => {
         setRating(3)
     }
-    const setVeryGood = () => {
+    const setGood = () => {
         setRating(4)
+    }
+    const setVeryGood = () => {
+        setRating(5)
     }
     const sendFeedback = async () => {
         setLoading(true);
@@ -64,21 +67,24 @@ const MVP = (props) => {
 <textarea required value={description} onChange={(e) => setDescription(e.target.value)} id="message" rows="4" class="shadow-xl block p-2.5 w-full text-sm text-white bg-zinc-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
 <br></br>
 <div class="space-x-4">
-<motion.button onClick={setBad} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+    <motion.button onClick={setAwful} whileHover={{scale: 1.2}} class="text-3xl">
+    😕
+    </motion.button>
+<motion.button onClick={setBad} whileHover={{scale: 1.2}} class="text-3xl">
  😬
 </motion.button>
-<motion.button onClick={setNeutral} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setNeutral} whileHover={{scale: 1.2}} class="text-3xl">
  😐
 </motion.button>
-<motion.button onClick={setGood} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setGood} whileHover={{scale: 1.2}} class="text-3xl">
  😁
 </motion.button>
-<motion.button onClick={setVeryGood} whileHover={{scale: 1.1}} class="focus:bg-slate-900 shadow-xl bg-slate-800 duration-500 shadow-xl px-6 py-2 font-large tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={setVeryGood} whileHover={{scale: 1.2}} class="text-3xl">
  🥰
 </motion.button>
 </div>
 <br></br>
-<motion.button onClick={sendFeedback} whileHover={{scale: 1.1}} class="bg-blue-700 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+<motion.button onClick={sendFeedback} whileHover={{scale: 1.1}} class="shadow-md shadow-purple-500/10 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
 {
     loading 
     ? (
