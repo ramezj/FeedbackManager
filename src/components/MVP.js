@@ -72,7 +72,7 @@ const MVP = (props) => {
     <motion.button onClick={setAwful} whileHover={{scale: 1.2}} class="text-3xl">
     😕
     </motion.button>
-<motion.button onClick={setBad} whileHover={{scale: 1.2}} class="text-3xl">
+<motion.button onClick={setBad} whileHover={{scale: 1.2}} class="text-3xl ">
  😬
 </motion.button>
 <motion.button onClick={setNeutral} whileHover={{scale: 1.2}} class="text-3xl">
