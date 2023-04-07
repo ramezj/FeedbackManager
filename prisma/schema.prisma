@@ -16,6 +16,8 @@ model User {
   feedbacks Feedback[]
   projects Project[]
   active Boolean
+  isSubscribed Boolean 
+  websiteUrl String
 
 }
 model Project {

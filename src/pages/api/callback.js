@@ -11,6 +11,6 @@ export default async function handler(req, res) {
             message: "Method not allowed",
           });
     }
-    res.status(200).json({Message:'Success'})
+    res.status(200).json(req.body)
     console.log(req.body);
   }
