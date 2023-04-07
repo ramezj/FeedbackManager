@@ -18,7 +18,7 @@ const UserInfo = () => {
             const userToken = cookies.get('user');
             if (!userToken) {
                 console.log("No Token Found, redirecting.")
-                router.push("/Login")
+                router.push("/Signout")
             } else {
                     const response = await fetch('/api/dashboard', {
                         method:'GET',
@@ -31,7 +31,7 @@ const UserInfo = () => {
                     const res = await response.json();
                     if(res.user == null || res.user == "null") {
                         console.log("User token is null, redirecting.")
-                        return router.push("/Login")
+                        return router.push("/Signout")
                     }
                     setUser(res.user);
                     setFeedback(res.user.feedbacks);

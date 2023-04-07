@@ -38,7 +38,8 @@ export default async function handler(req, res) {
                         email:req.body.email,
                         password:hashedPassword,
                         active:false,
-                        isSubscribed:false
+                        isSubscribed:false,
+                        websiteUrl:""
                     }
                 });
                 const createProject = await prisma.project.create({
