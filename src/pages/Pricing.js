@@ -38,7 +38,7 @@ export default function Pricing() {
     animate={{opacity: 1 }}
     exit={{opacity: 0 }}
     transition={{
-      duration:0.80
+      duration:1
     }}
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>

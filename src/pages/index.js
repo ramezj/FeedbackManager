@@ -51,11 +51,19 @@ export default function Home() {
     animate={{opacity: 1 }}
     exit={{opacity: 0 }}
     transition={{
-      duration:0.80
+      duration:2
     }}
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <section class="dark:bg-gray-900 dark:text-white">
+      <motion.div 
+    initial={{opacity: 0 }}
+    animate={{opacity: 1 }}
+    exit={{opacity: 0 }}
+    transition={{
+      duration:0.80,
+      delay:0.25
+    }}>
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
     <GlowAlert />
         <h1 class="mb-4 text-7xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-8xl dark:text-white">The <b className="bg-gradient-to-br from-purple-600 to-blue-500 inline-block text-transparent bg-clip-text">Next</b> Generation Feedback Manager</h1>
@@ -69,6 +77,7 @@ export default function Home() {
             </motion.button>  
         </div>
         </div> 
+        </motion.div>
         <center>
         <MVP userId={"642ccebbb1119d20b8d36b18"} projectId={"642ccebcb1119d20b8d36b19"} mode="dark"/>
         </center>

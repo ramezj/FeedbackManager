@@ -15,9 +15,9 @@ model User {
   updatedAt DateTime @updatedAt
   feedbacks Feedback[]
   projects Project[]
-  active Boolean
-  isSubscribed Boolean 
-  websiteUrl String
+  active Boolean @default(false)
+  isSubscribed Boolean @default(false)
+  websiteUrl String 
 
 }
 model Project {

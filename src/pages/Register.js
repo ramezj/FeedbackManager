@@ -37,7 +37,7 @@ export default function Register() {
     animate={{opacity: 1 }}
     exit={{opacity: 0 }}
     transition={{
-      duration:0.80
+      duration:1
     }}
     >
       <NavbarComponent logged={logged} username={username}/>
