@@ -70,7 +70,7 @@ export default function Home() {
         </div>
         </div> 
         <center>
-        <MVP userId={"642ccebbb1119d20b8d36b18"} projectId={"642ccebcb1119d20b8d36b19"}/>
+        <MVP userId={"642ccebbb1119d20b8d36b18"} projectId={"642ccebcb1119d20b8d36b19"} mode="dark"/>
         </center>
 </section>
 <Footer />
