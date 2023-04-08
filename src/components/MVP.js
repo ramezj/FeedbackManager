@@ -123,14 +123,14 @@ const MVP = (props) => {
     }
     return (
     <div> 
-            <motion.div class="shadow-xl max-w-sm p-6 bg-zinc-900 rounded-2xl shadow dark:bg-gray-950">
+            <motion.div class="shadow-xl max-w-sm p-6 bg-zinc-900 rounded-2xl shadow dark:bg-gray-950 ">
     <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Whats on your mind? 🔨 </h5>
         <br></br>
     </a>
 <textarea required value={description} onChange={(e) => setDescription(e.target.value)} id="message" rows="4" class="shadow-xl block p-2.5 w-full text-sm text-white bg-zinc-800 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
 <br></br>
-<div class="space-x-4">
+<div class="space-x-4 ">
     <motion.button onClick={setAwful} whileHover={{scale: 1.2}} class="text-3xl">
     😕
     </motion.button>
