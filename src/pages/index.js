@@ -82,7 +82,7 @@ export default function Home() {
         {/* <Features /> */}
         <center>
           
-        <MVP userId={"642ccebbb1119d20b8d36b18"} projectId={"642ccebcb1119d20b8d36b19"} mode="dark"/>
+        <MVP userId={"6430a27cfd8b3e7ed9cd3538"} projectId={"6430a27cfd8b3e7ed9cd3539"} mode="dark"/>
         </center>
         <center>
         </center>
