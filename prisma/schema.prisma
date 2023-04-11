@@ -16,7 +16,7 @@ model User {
   feedbacks Feedback[]
   projects Project[]
   active Boolean @default(false)
-  premium Boolean @default(false)
+  isSubscribed Boolean @default(false)
   websiteUrl String 
 
 }
