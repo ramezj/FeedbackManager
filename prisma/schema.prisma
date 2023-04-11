@@ -33,6 +33,8 @@ model Feedback {
   rating Int
   description String
   createdAt DateTime @default(now())
+  // ipAddress String
+  // country String
   userId String
   user User @relation(fields: [userId], references: [id])
   projectId String

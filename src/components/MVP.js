@@ -18,6 +18,8 @@ const MVP = (props) => {
     const [ projectId, setProjectId ] = useState("");
     const [ feedbackData, setFeedbackData ] = useState();
     const [ loading, setLoading ] = useState();
+    const [ ipAddress, setIpAddress ] = useState();
+    const [ location, setLocation ] = useState();
     const setAwful = () => {
         setRating(1)
     }
