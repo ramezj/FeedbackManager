@@ -34,6 +34,7 @@ model Feedback {
   description String
   createdAt DateTime @default(now())
   // ipAddress String
+  premium Boolean @default(false)
   // country String
   userId String
   user User @relation(fields: [userId], references: [id])

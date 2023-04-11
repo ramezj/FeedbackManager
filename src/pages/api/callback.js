@@ -11,6 +11,12 @@ export default async function handler(req, res) {
             message: "Method not allowed",
           });
     }
-    res.status(200).json(req.body)
-    console.log(req.body);
+    if(req.body.alert_name == "subscription_created") {
+      // Update User Logic Here.
+      return res.status(200).json("Subscription Created Successfully!")
+    } else {
+      return res.status(200).json({
+        message:"Couldn't Verify Subscription"
+      })
+    }
   }
