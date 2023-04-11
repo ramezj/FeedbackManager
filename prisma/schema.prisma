@@ -16,7 +16,7 @@ model User {
   feedbacks Feedback[]
   projects Project[]
   active Boolean @default(false)
-  isSubscribed Boolean @default(false)
+  premium Boolean @default(false)
   websiteUrl String 
 
 }
@@ -34,7 +34,6 @@ model Feedback {
   description String
   createdAt DateTime @default(now())
   // ipAddress String
-  premium Boolean @default(false)
   // country String
   userId String
   user User @relation(fields: [userId], references: [id])
