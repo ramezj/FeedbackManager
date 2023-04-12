@@ -24,13 +24,31 @@ export default async function handler(req, res) {
         });
         if(updateUser) {
           return res.status(200).json({ok:true, message:"Subscribed Succesfully"})
+        } else {
+          return res.status(400).json({ok:false, message:"Couldn't Subscribe"})
         }
       } catch (error) {
         return res.status(404).json({ok:false, error});
       }
-    } else {
-      return res.status(400).json({
-        message:"Couldn't Verify Subscription"
-      })
+    } 
+    if (req.body.alert_name == "subscription_cancelled") {
+      // Remove Subscription from User.
+      try {
+        const updateUser = await prisma.user.update({
+          where:{
+            id:req.body.passthrough
+          },
+          data: {
+            isSubscribed:false
+          }
+        });
+        if (updateUser) {
+          return res.status(200).json({ok:true, message:"Cancelled Subscription Successfully."})
+        } else {
+          return res.status(400).json({ok:false, message:"Couldn't Cancel Subscription"})
+        }
+      } catch (error) {
+        return res.status(404).json({ok:false, error});
+      }
     }
   }
