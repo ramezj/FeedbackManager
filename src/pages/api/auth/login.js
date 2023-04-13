@@ -37,7 +37,8 @@ export default async function handler(req, res) {
                 return res.status(200).json({
                     ok:true,
                     token:token,
-                    username:emailExist.username
+                    username:emailExist.username,
+                    uid:emailExist.id
                 })
             } else {
                 return res.status(400).json({

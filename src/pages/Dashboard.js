@@ -7,12 +7,14 @@ import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
 import { motion } from 'framer-motion';
+import { PaddleLoader } from "../components/PaddleLoader";
 
 export default function Dashboard() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
   const [ link, setLink ] = useState("/Login");
   const [ logged, setLogged ] = useState(false);
   const [ username, setUsername ] = useState();
+  const [ uid, setUid ] = useState();
   const cookies = new Cookies();
   const router = useRouter();
   useEffect(() => {
@@ -22,6 +24,8 @@ export default function Dashboard() {
         setIsLoggedIn("Sign In")
       } else {
         const tokenUsername = cookies.get("username");
+        const uidCookie = cookies.get("uid")
+        setUid(uidCookie);
         setUsername(tokenUsername);
         setLogged(true);
         setIsLoggedIn("Sign Out")
@@ -36,6 +40,7 @@ export default function Dashboard() {
   }
   return (
     <>
+    <PaddleLoader/>
     <motion.div 
     initial={{opacity: 0 }}
     animate={{opacity: 1 }}
@@ -48,6 +53,12 @@ export default function Dashboard() {
       <center>
         <br></br><br></br><br></br>
       <UserInfo />
+      <button onClick={(()=> {
+        Paddle.Checkout.open({
+          product:49358,
+          passthrough:uid
+        })
+      })}> Buy My Product </button>
     </center>
     </motion.div>
     <br></br><br></br><br></br>

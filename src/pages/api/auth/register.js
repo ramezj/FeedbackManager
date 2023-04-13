@@ -61,7 +61,8 @@ export default async function handler(req, res) {
                 return res.status(200).json({
                     ok:true,
                     token:token,
-                    username: createUser.username
+                    username: createUser.username,
+                    uid:createUser.id
                 })
                 } catch (error) {
                     console.log(error);

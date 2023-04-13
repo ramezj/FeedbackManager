@@ -17,6 +17,9 @@ model User {
   projects Project[]
   active Boolean @default(false)
   isSubscribed Boolean @default(false)
+  subscription_id String @default("")
+  subscription_update_url String @default("")
+  subscription_cancel_url String @default("")
   websiteUrl String 
 
 }

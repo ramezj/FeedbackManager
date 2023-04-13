@@ -17,6 +17,7 @@ export default function Signout() {
     } else {
       cookies.remove('user');
       cookies.remove('username');
+      cookies.remove('uid');
       router.push('/')
      }
   }, [])
