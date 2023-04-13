@@ -58,7 +58,7 @@ export default function Dashboard() {
           product:49358,
           passthrough:uid
         })
-      })}> Buy My Product </button>
+      })}> Subscribe :D </button>
     </center>
     </motion.div>
     <br></br><br></br><br></br>
