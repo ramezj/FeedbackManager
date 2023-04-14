@@ -75,7 +75,6 @@ const NavbarComponent = (props) => {
           <button onClick={redirectDashboard}>
           <a className="justify-between">
             Dashboard
-            <span className="badge">New</span>
           </a>
           </button>
         </li>
