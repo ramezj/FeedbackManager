@@ -10,6 +10,8 @@ const UserInfo = () => {
     const [ isLoading, setLoading ] = useState(false);
     const [ feedback, setFeedback ] = useState([]);
     const [ projects, setProjects ] = useState([]);
+    const [ cancelSubscription, setCancelSubscription ] = useState();
+    const [ updateCard, setUpdateCard ] = useState();
     const cookies = new Cookies();
     const router = useRouter()
     useEffect(() => {
@@ -35,6 +37,8 @@ const UserInfo = () => {
                     }
                     setUser(res.user);
                     setFeedback(res.user.feedbacks);
+                    setCancelSubscription(res.user.subscription_cancel_url);
+                    setUpdateCard(res.user.subscription_update_url);
                     setProjects(res.user.projects)
                     setLoading(false)
                     console.log(res);
@@ -42,6 +46,13 @@ const UserInfo = () => {
         }
         TokenVerification();
     }, [])
+    const cancelSubscriptionRedirect = () => {
+        console.log(cancelSubscription);
+        router.push(cancelSubscription);
+    }
+    const updateCardRedirect = () => {
+        router.push(updateCard);
+    }
     // Loading Spinner
     if (isLoading) return (
         <>
@@ -56,13 +67,8 @@ const UserInfo = () => {
     )
     if (!user) return <><p>No Profile Data..</p></>
   return (
-    <motion.div 
-    whileHover={{
-        scale:1.1
-    }}
+    <div 
     class="shadow shadow-xl w-3/4 p-4 text-center bg-zinc-900 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        
-<form>
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
             <label class="block mb-2 text-sm font-medium text-white dark:text-white">Username</label>
@@ -81,10 +87,21 @@ const UserInfo = () => {
             <input type="text" id="last_name" class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="Doe" required/>
         </div>
     </div>
-    <button class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-12 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">Save</button>
-</form>
-
-    </motion.div>
+    <div class="space-x-4 space-y-4">
+    <motion.button 
+    onClick={updateCardRedirect}
+    whileHover={{scale:1.1}}
+    class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-12 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+    Change Payment Info
+    </motion.button>
+    <motion.button 
+    onClick={cancelSubscriptionRedirect}
+    whileHover={{scale:1.1}}
+    class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-12 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+    Cancel Subscription
+    </motion.button>
+    </div>
+    </div>
   )
 }
 

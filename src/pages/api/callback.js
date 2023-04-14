@@ -34,6 +34,13 @@ export default async function handler(req, res) {
         return res.status(404).json({ok:false, error});
       }
     } 
+
+    if (req.body.alert_name == "subscription_payment_succeeded") {
+      // Stay Subscribed
+    }
+
+    
+
     if (req.body.alert_name == "subscription_cancelled") {
       // Remove Subscription from User.
       try {
@@ -42,7 +49,10 @@ export default async function handler(req, res) {
             id:req.body.passthrough
           },
           data: {
-            isSubscribed:false
+            isSubscribed:false,
+            subscription_id: "",
+            subscription_update_url:"",
+            subscription_cancel_url:""
           }
         });
         if (updateUser) {

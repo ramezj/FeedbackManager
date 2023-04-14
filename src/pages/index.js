@@ -10,7 +10,6 @@ import "flowbite"
 import { useScroll, animated, } from '@react-spring/web'
 import Features from "../components/Features"
 
-
 export default function Home() {
   const [content, set] = useState(2);
   const scrollIntertia = 70;
@@ -58,16 +57,18 @@ export default function Home() {
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <section class="dark:bg-gray-900 dark:text-white">
       <motion.div 
-    initial={{opacity: 0 }}
+    initial={{opacity: 0}}
     animate={{opacity: 1 }}
-    exit={{opacity: 0 }}
+    exit={{opacity: 0}}
     transition={{
       duration:0.80,
       delay:0.25
     }}>
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
     <GlowAlert />
-        <h1 class="mb-4 text-7xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-8xl dark:text-white">The <b className="bg-gradient-to-r from-purple-600 to-blue-500 inline-block text-transparent bg-clip-text">Next</b> Generation Feedback Manager</h1>
+        <motion.h1 
+
+        class="mb-4 text-7xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-8xl dark:text-white">The <b className="bg-gradient-to-r from-purple-600 to-blue-500 inline-block text-transparent bg-clip-text">Next</b> Generation Feedback Manager</motion.h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white ">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
        <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
@@ -81,7 +82,6 @@ export default function Home() {
         </motion.div>
         {/* <Features /> */}
         <center>
-          
         <MVP userId={"6430a27cfd8b3e7ed9cd3538"} projectId={"6430a27cfd8b3e7ed9cd3539"} mode="dark"/>
         </center>
         <center>

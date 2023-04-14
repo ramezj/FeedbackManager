@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import useSWR from 'swr';
 import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'

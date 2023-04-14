@@ -7,7 +7,7 @@ import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
 import { motion } from 'framer-motion';
-import { PaddleLoader } from "../components/PaddleLoader";
+import UpgradeSubscription from "../components/UpgradeSubscription";
 
 export default function Dashboard() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");
@@ -40,7 +40,6 @@ export default function Dashboard() {
   }
   return (
     <>
-    <PaddleLoader/>
     <motion.div 
     initial={{opacity: 0 }}
     animate={{opacity: 1 }}
@@ -53,12 +52,7 @@ export default function Dashboard() {
       <center>
         <br></br><br></br><br></br>
       <UserInfo />
-      <button onClick={(()=> {
-        Paddle.Checkout.open({
-          product:49358,
-          passthrough:uid
-        })
-      })}> Subscribe :D </button>
+      <UpgradeSubscription />
     </center>
     </motion.div>
     <br></br><br></br><br></br>
