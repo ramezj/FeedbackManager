@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie';
 import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion';
+import GlowAlert from "../components/GlowAlert";
 
 const UpgradeSubscription = () => {
     const [ user, setUser ] = useState(null);
@@ -68,7 +69,7 @@ const UpgradeSubscription = () => {
     if (premium == true ) {
         return (
             <>
-            <p>Subscribed</p>
+            <GlowAlert alert={"Premium"} text={"Thanks for supporting "} bold={"Feedbacker"}/>
             </>
         )
     } if (premium == false) {
@@ -84,7 +85,7 @@ const UpgradeSubscription = () => {
             })
           })}
         whileHover={{scale: 1.1}} class="bg-gradient-to-r from-green-400 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
-        Upgrade 
+        Upgrade To Premium
        </motion.button>
         </>
         )

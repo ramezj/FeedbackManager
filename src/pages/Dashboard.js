@@ -50,9 +50,10 @@ export default function Dashboard() {
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
-        <br></br><br></br><br></br>
+        <br></br>
+        <UpgradeSubscription />
+        <br></br><br></br>
       <UserInfo />
-      <UpgradeSubscription />
     </center>
     </motion.div>
     <br></br><br></br><br></br>

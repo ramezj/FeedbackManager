@@ -78,7 +78,8 @@ const NavbarComponent = (props) => {
           </a>
           </button>
         </li>
-        <li><button onClick={redirectSettings}><a>Settings</a></button></li>
+        <li><button onClick={redirectSettings}><a>
+          Settings</a></button></li>
         <li><button onClick={redirectSignOut}><a>Logout</a></button></li>
       </ul>
     </div>
