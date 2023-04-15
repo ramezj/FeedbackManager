@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import { NextRequest } from 'next/server'
 
 export default async function handler(req, res) {
+    console.log(req.x-vercel-ip-country);
+    console.log(req.x-real-ip);
     console.log(req);
     const prisma = new PrismaClient();
     const { body, method } = req;
