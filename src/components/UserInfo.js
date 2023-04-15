@@ -57,11 +57,11 @@ const UserInfo = () => {
   return (
     <div>
     <br></br>
-    <motion.button whileHover={{scale: 1.1}} class="bg-gradient-to-r from-green-400 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+    {/* <motion.button whileHover={{scale: 1.1}} class="bg-gradient-to-r from-green-400 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
         Create Project
-       </motion.button> 
+       </motion.button>  */}
        <br></br>
-    {
+    {/* {
             projects.map((y) => {
                 return (
                     <>
@@ -69,8 +69,7 @@ const UserInfo = () => {
                     </>
                 )
             })
-        }
-        <br></br><br></br>    
+        } */}   
   {feedback.map((x) => {
             return (
                 <>

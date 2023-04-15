@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import { NextRequest } from 'next/server'
 
 export default async function handler(req, res) {
+    const { nextUrl, geo } = req;
+    console.log(geo);
     const prisma = new PrismaClient();
     const { body, method } = req;
     if (method !== "POST") {
