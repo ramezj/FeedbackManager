@@ -86,7 +86,7 @@ const UserInfo = () => {
             </a>
             <p class="mb-3 font-normal text-white dark:text-gray-400">{x.description}</p>
             
-    </motion.div>
+    </motion.div>  
                 </>
             )
         })}

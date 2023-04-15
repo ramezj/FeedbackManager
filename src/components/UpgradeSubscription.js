@@ -76,6 +76,8 @@ const UpgradeSubscription = () => {
         return (
             <>
         <PaddleLoader/>
+        <GlowAlert alert={"Free Tier"} text={"Please Upgrade to access all "} bold={"Features"}/>
+        <br></br>
         <motion.button 
         onClick={(()=> {
             Paddle.Checkout.open({
@@ -84,8 +86,8 @@ const UpgradeSubscription = () => {
               email:user.email
             })
           })}
-        whileHover={{scale: 1.1}} class="bg-gradient-to-r from-green-400 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
-        Upgrade To Premium
+        whileHover={{scale: 1.1}} class="bg-gradient-to-r from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+       Premium 
        </motion.button>
         </>
         )

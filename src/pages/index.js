@@ -68,7 +68,7 @@ export default function Home() {
     <GlowAlert alert={"Beta"} text={"Feedbacker is currently in Private "} bold={"Beta"}/>
         <motion.h1 
         class="mb-4 text-7xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-8xl dark:text-white">The <b className="bg-gradient-to-r from-purple-600 to-blue-500 inline-block text-transparent bg-clip-text">Next</b> Generation Feedback Manager</motion.h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white ">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white ">Managing your users feedback shouldnt be hard, nor expensive. Integrate the Feedbacker Widget Now!</p>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
        <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
         Get Started
