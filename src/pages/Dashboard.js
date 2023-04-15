@@ -151,7 +151,7 @@ export default function Dashboard() {
         <div>
           <motion.h1 class="text-3xl font-medium">👋 Hello, Welcome <b>{username}</b></motion.h1>
         </div>
-        
+        <br></br>
       <UserInfo />
     </center>
     </motion.div>

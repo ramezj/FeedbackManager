@@ -81,7 +81,7 @@ export default function Home() {
         </motion.div>
         {/* <Features /> */}
         <center>
-        <MVP userId={"6430a27cfd8b3e7ed9cd3538"} projectId={"6430a27cfd8b3e7ed9cd3539"} mode="dark"/>
+        <MVP userId={"6437d4b7450b4af65b3207d8"} projectId={"6437d4b7450b4af65b3207d9"} mode="dark"/>
         </center>
         <center>
         </center>

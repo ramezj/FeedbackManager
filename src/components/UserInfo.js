@@ -9,6 +9,7 @@ const UserInfo = () => {
     const [ isLoading, setLoading ] = useState(false);
     const [ feedback, setFeedback ] = useState([]);
     const [ projects, setProjects ] = useState([]);
+    const [ premium, setPremium ] = useState();
     const cookies = new Cookies();
     const router = useRouter()
     useEffect(() => {
@@ -33,6 +34,7 @@ const UserInfo = () => {
                         return router.push("/Signout")
                     }
                     setUser(res.user);
+                    setPremium(res.user.isSubscribed);
                     setFeedback(res.user.feedbacks);
                     setProjects(res.user.projects)
                     setLoading(false)
@@ -54,23 +56,10 @@ const UserInfo = () => {
         </>
     )
     if (!user) return <><p>No Profile Data..</p></>
-  return (
-    <div>
-    <br></br>
-    {/* <motion.button whileHover={{scale: 1.1}} class="bg-gradient-to-r from-green-400 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
-        Create Project
-       </motion.button>  */}
-       <br></br>
-    {/* {
-            projects.map((y) => {
-                return (
-                    <>
-                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">Project Id : {y.id}</span>
-                    </>
-                )
-            })
-        } */}   
-  {feedback.map((x) => {
+    if (premium == true) return (
+        <center>
+    <motion.div className="flex flex-wrap gap-5 justify-center">
+{feedback.map((x) => {
             return (
                 <>
     <motion.div 
@@ -89,9 +78,27 @@ const UserInfo = () => {
                 </>
             )
         })}
-        <br></br>
-    </div>
-  )
+    </motion.div>
+    </center>
+    )
+    if (premium == false) {
+        return ( 
+            <>
+            <motion.div 
+    whileHover={{
+        scale:1.1
+    }}
+    class="max-w-sm p-6 bg-zinc-900 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+        <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Demo Feedback</span>
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Demo Feedback</h5> 
+            </a>
+            <p class="mb-3 font-normal text-white dark:text-gray-400">This is a demo feedback, Please subscribe to the premimu version to receive <b>Unlimited</b> feedbacks!</p>
+            
+    </motion.div>  
+            </>
+        )
+    }
 }
 
 export default UserInfo
