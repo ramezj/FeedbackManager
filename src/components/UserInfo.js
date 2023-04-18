@@ -58,7 +58,7 @@ const UserInfo = () => {
     if (!user) return <><p>No Profile Data..</p></>
     if (premium == true) return (
         <center>
-    <motion.div className="flex flex-wrap gap-5 justify-center">
+    <motion.div className="flex flex-wrap gap-5 justify-center w-4/5">
 {feedback.map((x) => {
             return (
                 <>
