@@ -95,11 +95,11 @@ export default function PricingComponent() {
     }}
     class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
             <a href="#">
-                <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Individual</h5> 
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">$3.99</h5> 
+                <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Free</h5> 
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Absolutely Free.</h5> 
             </a>
             <br></br>
-            <p class="mb-3 font-normal text-white dark:text-gray-400">100 User Feedbacks</p>
+            <p class="mb-3 font-normal text-white dark:text-gray-400">10 User Feedbacks</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">1 Project</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
@@ -109,16 +109,17 @@ export default function PricingComponent() {
             
     </motion.div>  
     <motion.div 
+    initial={{scale:1.17}}
     whileHover={{
-        scale:1.1
+        scale:1.3
     }}
-    class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
+    class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg rounded-2xl">
             <a href="#">
-                <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Free</h5> 
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Absolutely Free.</h5>
+                <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Individual</h5> 
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">$3.99</h5>
             </a>
             <br></br>
-            <p class="mb-3 font-normal text-white dark:text-gray-400">10 User Feedbacks</p>
+            <p class="mb-3 font-normal text-white dark:text-gray-400">100 User Feedbacks</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">1 Project </p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
