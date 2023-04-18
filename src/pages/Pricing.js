@@ -47,7 +47,7 @@ export default function Pricing() {
         <div className="mx-auto max-w-2xl sm:text-center w-4/5">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Simple, <b className="bg-gradient-to-r from-purple-600 to-blue-500 inline-block text-transparent bg-clip-text">No-Tricks</b> Pricing.</h2>
           <p className="mt-6 text-lg leading-8 text-white">
-            Interacting with your users shouldn't be a hassle. Simple, no-tricks pricing. Wether you're starting out, or if you're at enterprise-level.
+            Interacting with your users shouldnt be a hassle. Simple, no-tricks pricing. Wether youre starting out, or if youre at enterprise-level.
           </p>
           <br></br>
           <br></br>
