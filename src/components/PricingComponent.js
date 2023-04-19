@@ -86,7 +86,7 @@ export default function PricingComponent() {
               product:49358,
               passthrough:uid,
               email:email,
-              success:'/Dashboard'
+              success:'/success'
             })
           })}
         whileHover={{scale: 1.1}} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
@@ -114,7 +114,7 @@ export default function PricingComponent() {
               product:49810,
               passthrough:uid,
               email:email,
-              success:'/Dashboard'
+              success:'/success'
             })
           })}
         whileHover={{scale: 1.1}} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">

@@ -31,7 +31,7 @@ const UserInfo = () => {
                     const res = await response.json();
                     if(res.user == null || res.user == "null") {
                         console.log("User token is null, redirecting.")
-                        return router.push("/Signout")
+                        return router.push("/Login")
                     }
                     setUser(res.user);
                     setPremium(res.user.isSubscribed);
