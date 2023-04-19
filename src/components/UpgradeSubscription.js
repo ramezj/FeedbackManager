@@ -51,12 +51,6 @@ const UpgradeSubscription = () => {
         }
         TokenVerification();
     }, [])
-    
-    // useEffect(() => {
-    //     setPremium(user.isSubscribed);
-    //     console.log(premium)
-    //     setPremiumLoading(false);
-    // }, [])
     if (premium === undefined) {
         return (
             <>
