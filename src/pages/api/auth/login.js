@@ -38,7 +38,8 @@ export default async function handler(req, res) {
                     ok:true,
                     token:token,
                     username:emailExist.username,
-                    uid:emailExist.id
+                    uid:emailExist.id,
+                    email:emailExist.email
                 })
             } else {
                 return res.status(400).json({

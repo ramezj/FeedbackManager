@@ -9,8 +9,8 @@ import { PaddleLoader } from '../components/PaddleLoader';
 
 export default function PricingComponent() {
     const [ user, setUser ] = useState(false);
-    const [ userInfo, setUserInfo ] = useState();
     const [ uid, setUid ] = useState();
+    const [ email, setEmail ] = useState();
     const cookies = new Cookies();
     const router = useRouter()
 
@@ -21,22 +21,10 @@ export default function PricingComponent() {
             setUser(false)
             console.log("No Token Found.")
         } else {
-          const response = await fetch('/api/dashboard', {
-            method:'GET',
-            headers: {
-                "Content-Type": "application/json",
-                credentials: "same-origin",
-                "credentials":"same-origin"
-            },
-        })
-        const res = await response.json();
-        if(res.user == null || res.user == "null") {
-            console.log("User token is null, redirecting.")
-            return router.push("/Signout")
-        }
-            setUserInfo(res.user);
             setUser(true);
-            const userIdCookie = cookies.get('uid')
+            const emailCookie = cookies.get('email');
+            const userIdCookie = cookies.get('uid');
+            setEmail(emailCookie);
             setUid(userIdCookie)
         }
     }
@@ -53,7 +41,7 @@ export default function PricingComponent() {
       router.push('/Login');
     } else router.push('/Dashboard');
   }
-  if (user == true && uid != undefined) {
+  if (user == true && uid != undefined && email != undefined) {
     return (
       <>
       <PaddleLoader/>
@@ -97,7 +85,7 @@ export default function PricingComponent() {
             Paddle.Checkout.open({
               product:49358,
               passthrough:uid,
-              email:userInfo.email,
+              email:email,
               success:'/Dashboard'
             })
           })}
@@ -125,7 +113,7 @@ export default function PricingComponent() {
             Paddle.Checkout.open({
               product:49810,
               passthrough:uid,
-              email:userInfo.email,
+              email:email,
               success:'/Dashboard'
             })
           })}

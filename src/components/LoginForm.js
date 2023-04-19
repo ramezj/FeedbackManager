@@ -38,6 +38,7 @@ const LoginForm = () => {
             cookies.set('user' , res.token);
             cookies.set('username' , res.username)
             cookies.set('uid', res.uid)
+            cookies.set('email', res.email);
             router.push('/Dashboard')
         }
         console.log(res);

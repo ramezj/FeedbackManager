@@ -62,7 +62,8 @@ export default async function handler(req, res) {
                     ok:true,
                     token:token,
                     username: createUser.username,
-                    uid:createUser.id
+                    uid:createUser.id,
+                    email:createUser.email
                 })
                 } catch (error) {
                     console.log(error);
