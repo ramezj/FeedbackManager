@@ -40,7 +40,7 @@ export default async function handler(req, res) {
                         active:false,
                         isSubscribed:false,
                         websiteUrl:"",
-                        subscription_plan : "Free"
+                        subscription_plan : 0
                     }
                 });
                 const createProject = await prisma.project.create({
