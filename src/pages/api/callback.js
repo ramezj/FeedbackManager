@@ -24,6 +24,7 @@ export default async function handler(req, res) {
             subscription_id: req.body.subscription_id,
             subscription_update_url:req.body.update_url,
             subscription_cancel_url:req.body.cancel_url,
+            subscription_plan_id:req.body.subscription_plan_id
           }
         });
         if(updateUser) {

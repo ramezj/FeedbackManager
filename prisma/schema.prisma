@@ -21,7 +21,7 @@ model User {
   subscription_update_url String @default("")
   subscription_cancel_url String @default("")
   websiteUrl String 
-  subscription_plan Int @default(0)
+  subscription_plan_id Int @default(0)
 }
 model Project {
   id String @id @default(auto()) @map("_id") @db.ObjectId 
