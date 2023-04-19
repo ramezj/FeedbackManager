@@ -39,8 +39,7 @@ export default async function handler(req, res) {
                         password:hashedPassword,
                         active:false,
                         isSubscribed:false,
-                        websiteUrl:"",
-                        subscription_plan : 0
+                        websiteUrl:""
                     }
                 });
                 const createProject = await prisma.project.create({
