@@ -12,7 +12,6 @@ export default async function handler(req, res) {
           });
     }
     if(req.body.alert_name == "subscription_created") {
-      console.log(req.body);
       // Update User Logic Here. 
       try {
         const updateUser = await prisma.user.update({
