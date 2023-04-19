@@ -12,6 +12,7 @@ export default async function handler(req, res) {
           });
     }
     if(req.body.alert_name == "subscription_created") {
+      console.log(req.body);
       // Update User Logic Here. 
       try {
         const updateUser = await prisma.user.update({
@@ -22,7 +23,7 @@ export default async function handler(req, res) {
             isSubscribed:true,
             subscription_id: req.body.subscription_id,
             subscription_update_url:req.body.update_url,
-            subscription_cancel_url:req.body.cancel_url
+            subscription_cancel_url:req.body.cancel_url,
           }
         });
         if(updateUser) {
@@ -38,8 +39,6 @@ export default async function handler(req, res) {
     if (req.body.alert_name == "subscription_payment_succeeded") {
       // Stay Subscribed
     }
-
-    
 
     if (req.body.alert_name == "subscription_cancelled") {
       // Remove Subscription from User.
