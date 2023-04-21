@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
     <AnimatePresence mode='wait'>
-    <motion.div className="bg-black h-screen" 
+    <motion.div className="bg-black h-full" 
     // key={router.route}
     initial={{opacity: 0 }}
     animate={{opacity: 1 }}
