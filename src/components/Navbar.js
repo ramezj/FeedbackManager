@@ -53,7 +53,7 @@ const NavbarComponent = (props) => {
         <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectPricing}><a>Pricing</a></button></li>
       </ul>
     </div>
-    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl">HeyFeedback!</button>
+    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl"><b>Hey</b>Feedback</button>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -102,7 +102,7 @@ const NavbarComponent = (props) => {
         <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectPricing}><a>Pricing</a></button></li>
       </ul>
     </div>
-    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl">HeyFeedback!</button>
+    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl"><b>Hey</b>Feedback</button>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -113,8 +113,7 @@ const NavbarComponent = (props) => {
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
-  <button onClick={redirectSignIn} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg">Sign In</button>
-<button onClick={redirectSignUp} type="button" className="shadow-md shadow-purple-500/20 text-white ml-1 btn bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl normal-case text-lg">Sign Up</button>
+<button onClick={redirectSignUp} type="button" className="lg:px-14 md:px-12 flex items-center justify-center shadow-md shadow-purple-500/20 text-white ml-1 btn bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl normal-case text-lg">Get Started</button>
   </div>
 </div>
 </>
