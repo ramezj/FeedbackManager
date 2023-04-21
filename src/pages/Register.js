@@ -39,7 +39,7 @@ export default function Register() {
     transition={{
       duration:1
     }}
-    className='bg-black'
+    class="h-full min-h-screen bg-black"
     >
       <NavbarComponent logged={logged} username={username}/>
       <center>

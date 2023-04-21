@@ -15,7 +15,8 @@ module.exports = {
     colors:{
       'heyfeedback':'#181818',
       'heyfeedback-hover':"#151515",
-      'MVP':'#090909'
+      'MVP':'#090909',
+      'form':'#0f0f0f'
     }
   },
   plugins: [

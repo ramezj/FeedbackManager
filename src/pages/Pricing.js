@@ -40,6 +40,7 @@ export default function Pricing() {
     transition={{
       duration:1
     }}
+    class="h-full min-h-screen bg-black"
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>

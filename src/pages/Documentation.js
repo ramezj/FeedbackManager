@@ -48,6 +48,7 @@ export default function Documentation() {
     transition={{
       duration:1
     }}
+    class="h-full min-h-screen bg-black"
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
@@ -58,13 +59,7 @@ export default function Documentation() {
         </SyntaxHighlighter>
 </div>
     </center>
-    </motion.div>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
+</motion.div>
     <Footer/>
     </>
   )
