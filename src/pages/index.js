@@ -93,6 +93,7 @@ export default function Home() {
         <center>
         </center>
 </section>
+<Footer/>
     </motion.div>
   )
 }
