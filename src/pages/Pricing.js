@@ -60,12 +60,6 @@ export default function Pricing() {
         <PricingComponent class="mt-10"/>
     </center>
     </motion.div>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
     <Footer/>
     </>
   )

@@ -39,15 +39,13 @@ export default function Register() {
     transition={{
       duration:1
     }}
+    className='bg-black'
     >
       <NavbarComponent logged={logged} username={username}/>
       <center>
         <br></br><br></br>
       <RegisterForm />
     </center>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
     <Footer/>
     </motion.div>
   )

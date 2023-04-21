@@ -14,7 +14,8 @@ module.exports = {
     extend: {},
     colors:{
       'heyfeedback':'#181818',
-      'heyfeedback-hover':"#151515"
+      'heyfeedback-hover':"#151515",
+      'MVP':'#090909'
     }
   },
   plugins: [
