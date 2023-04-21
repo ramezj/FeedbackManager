@@ -41,25 +41,25 @@ const NavbarComponent = (props) => {
   if(props.logged == true) {
     return (
       <>
-      <div className="navbar bg-white">
+      <div className="navbar bg-black ">
   <div className="navbar-start mt-2">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-black" fill="none" viewBox="0 0 24 24" stroke="black"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-80">
-        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectHome}><a>Home</a></button></li>
-        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectDocs}><a>API Docs</a></button></li>
-        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectPricing}><a>Pricing</a></button></li>
+        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectHome}><a>Home</a></button></li>
+        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectDocs}><a>API Docs</a></button></li>
+        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectPricing}><a>Pricing</a></button></li>
       </ul>
     </div>
-    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl text-black">Hey<b>Feedback</b></button>
+    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl">HeyFeedback!</button>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectHome}><a>Home</a></button></li>
-      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectDocs}><a>API Docs</a></button></li>
-      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectPricing}><a>Pricing</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectHome}><a>Home</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectDocs}><a>API Docs</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectPricing}><a>Pricing</a></button></li>
       
     </ul>
   </div>
@@ -90,31 +90,31 @@ const NavbarComponent = (props) => {
   }
     return (
 <>
-<div className="navbar bg-transparent">
+<div className="navbar bg-black ">
   <div className="navbar-start mt-2">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-80">
-        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectHome}><a>Home</a></button></li>
-        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectDocs}><a>API Docs</a></button></li>
-        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectPricing}><a>Pricing</a></button></li>
+        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectHome}><a>Home</a></button></li>
+        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectDocs}><a>API Docs</a></button></li>
+        <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectPricing}><a>Pricing</a></button></li>
       </ul>
     </div>
-    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl text-black">Hey<b>Feedback</b></button>
+    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl">HeyFeedback!</button>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectHome}><a>Home</a></button></li>
-      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectDocs}><a>API Docs</a></button></li>
-      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectPricing}><a>Pricing</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectHome}><a>Home</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectDocs}><a>API Docs</a></button></li>
+      <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2" onClick={redirectPricing}><a>Pricing</a></button></li>
       
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
-  <button onClick={redirectSignIn} type="button" className="lg:px-12 py-2 shadow shadow-xl ml-1 btn btn-ghost normal-case text-lg text-black duration-500">Sign In</button>
-<button onClick={redirectSignUp} type="button" className="lg:px-12 py-2 shadow shadow-xl text-white ml-1 btn bg-blue-700 hover:bg-blue-800 duration-500 normal-case text-lg border-none">Sign Up</button>
+  <button onClick={redirectSignIn} type="button" className="shadow shadow-lg ml-1 btn btn-ghost normal-case text-lg">Sign In</button>
+<button onClick={redirectSignUp} type="button" className="shadow-md shadow-purple-500/20 text-white ml-1 btn bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl normal-case text-lg">Sign Up</button>
   </div>
 </div>
 </>

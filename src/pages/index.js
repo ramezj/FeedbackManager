@@ -53,7 +53,6 @@ export default function Home() {
     transition={{
       duration:2
     }}
-    className='bg-white'
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <section class="dark:bg-gray-900 dark:text-white">
@@ -67,27 +66,24 @@ export default function Home() {
     }}>
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 ">
       <center>
-      {/* <GlowAlert alert={"Beta"} text={"Feedbacker is currently in Private "} bold={"Beta"}/> */}
+      <GlowAlert alert={"Beta"} text={"Feedbacker is currently in Private "} bold={"Beta"}/>
       </center>
         <motion.h1 
-        class="mb-4 text-7xl font-bold tracking-tight leading-none text-heyfeedback md:text-5xl lg:text-7xl dark:text-white">Innovating User Feedback Management.</motion.h1>
+        class="mb-4 text-7xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-8xl dark:text-white">Innovating <b className="bg-gradient-to-r from-purple-600 to-blue-500 inline-block text-transparent bg-clip-text">User</b> Feedback Management</motion.h1>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white ">Managing your users feedback shouldnt be hard, nor expensive. Integrate the Feedbacker Widget Now!</p>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-       <motion.button onClick={redirectUser} class="flex items-center justify-center bg-blue-700 hover:bg-blue-800 duration-500 px-12 py-3 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg shadow shadow-xl">
-        Get Started  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-</svg>  
+       <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+        Get Started
        </motion.button>     
-            <motion.button class="shadow shadow-xl bg-heyfeedback hover:bg-heyfeedback-hover duration-500 inline-flex justify-center items-center px-14 py-3 text-base text-center text-white font-bold rounded-lg">
-                Learn More 
+            <motion.button whileHover={{scale:1.1}} class="inline-flex justify-center items-center px-7 py-3 text-base duration-300 text-center text-white font-bold rounded-lg dark:bg-transparent duration-500 dark:text-white">
+                Learn More →
             </motion.button>  
         </div>
         </div> 
         </motion.div>
+        {/* <Features /> */}
         <center>
-          <div className="lg:mb-8">
-          <MVP userId={"6437d4b7450b4af65b3207d8"} projectId={"6437d4b7450b4af65b3207d9"} mode="dark"/>
-          </div>
+        <MVP userId={"6437d4b7450b4af65b3207d8"} projectId={"6437d4b7450b4af65b3207d9"} mode="dark"/>
         </center>
         <center>
         </center>
