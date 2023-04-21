@@ -113,7 +113,7 @@ const NavbarComponent = (props) => {
     </ul>
   </div>
   <div className="navbar-end space-x-3 mr-2 mt-2">
-<button onClick={redirectSignUp} type="button" className="lg:px-14 md:px-12 flex items-center justify-center shadow-md shadow-purple-500/20 text-white ml-1 btn bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl normal-case text-lg">Get Started</button>
+<button onClick={redirectSignUp} type="button" className="lg:px-10 md:px-10 flex items-center justify-center shadow-md shadow-purple-500/20 text-white ml-1 btn bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl normal-case text-lg">Get Started</button>
   </div>
 </div>
 </>
