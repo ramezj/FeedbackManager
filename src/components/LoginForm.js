@@ -47,7 +47,7 @@ const LoginForm = () => {
     return (
     <div>
   <div class="shadow-lg w-full max-w-sm p-4 bg-form rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
-    <h1 class="text-3xl font-semibold text-white">Sign In</h1>
+    <h1 class="text-3xl font-semibold text-white">Login</h1>
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your email</label>
             <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="font-bold shadow shadow-lg bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="hey@Feedback.com" />
