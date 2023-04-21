@@ -47,6 +47,7 @@ export default function Dashboard() {
     transition={{
       duration:1
     }}
+    class="h-full min-h-screen bg-black"
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>
@@ -60,12 +61,6 @@ export default function Dashboard() {
       <UserInfo />
     </center>
     </motion.div>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
     <Footer/>
     </>
   )

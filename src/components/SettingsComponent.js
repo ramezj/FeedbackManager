@@ -68,23 +68,23 @@ const UserInfo = () => {
     if (!user) return <><p>No Profile Data..</p></>
   return (
     <div 
-    class="shadow shadow-xl w-3/4 p-4 text-center bg-zinc-900 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    class="shadow shadow-xl w-3/4 p-4 text-center bg-form rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
             <label class="block mb-2 text-sm font-medium text-white dark:text-white">Username</label>
-            <input type="text" id="first_name" class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder={user.username} required/>
+            <input type="text" id="first_name" class="font-bold bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" value={user.username} required/>
         </div>
         <div>
             <label class="block mb-2 text-sm font-medium text-white dark:text-white">Email</label>
-            <input type="text" id="last_name" class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder={user.email} required/>
+            <input type="text" id="last_name" class="font-bold bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" value={user.email} required/>
         </div>
         <div>
             <label class="block mb-2 text-sm font-medium text-white dark:text-white">API Key</label>
-            <input type="text" id="last_name" class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="Doe" required/>
+            <input type="text" id="last_name" class="font-bold bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" value="Doe" required/>
         </div>  
         <div>
             <label for="phone" class="block mb-2 text-sm font-medium text-white dark:text-white">Website URL</label>
-            <input type="text" id="last_name" class="bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="Doe" required/>
+            <input type="text" id="last_name" class="font-bold bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" value={user.websiteUrl} required/>
         </div>
     </div>
     <div class="space-x-4 space-y-4">

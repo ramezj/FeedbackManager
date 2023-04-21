@@ -66,7 +66,7 @@ const UserInfo = () => {
     whileHover={{
         scale:1.1
     }}
-    class="max-w-sm p-6 bg-zinc-900 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+    class="max-w-sm p-6 bg-form rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
     <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{x.projectId}</span>
         <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">{x.title}</span>
             <a href="#">
