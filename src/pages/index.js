@@ -53,7 +53,7 @@ export default function Home() {
     transition={{
       duration:2
     }}
-    class="h-full bg-black"
+    class="h-full min-h-screen bg-black"
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <section class="dark:bg-gray-900 dark:text-white">
