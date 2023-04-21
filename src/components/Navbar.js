@@ -53,7 +53,7 @@ const NavbarComponent = (props) => {
         <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectPricing}><a>Pricing</a></button></li>
       </ul>
     </div>
-    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl text-black">HeyFeedback!</button>
+    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl text-black">Hey<b>Feedback</b></button>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -102,7 +102,7 @@ const NavbarComponent = (props) => {
         <li><button class="ml-1 btn btn-ghost normal-case text-md mt-2 text-black" onClick={redirectPricing}><a>Pricing</a></button></li>
       </ul>
     </div>
-    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl text-black">HeyFeedback!</button>
+    <button onClick={redirectHome} className="ml-1 btn btn-ghost normal-case text-xl text-black">Hey<b>Feedback</b></button>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
