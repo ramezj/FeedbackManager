@@ -12,6 +12,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors:{
+      'heyfeedback':'#181818',
+      'heyfeedback-hover':"#151515"
+    }
   },
   plugins: [
     require("daisyui"),
