@@ -46,7 +46,7 @@ const LoginForm = () => {
 
     return (
     <div>
-  <div class="shadow-lg w-full max-w-sm p-4 bg-form rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
+  <div class="shadow-lg w-full max-w-sm p-4 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c] rounded-xl shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 space-y-6">
     <h1 class="text-3xl font-semibold text-white">Login</h1>
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your email</label>

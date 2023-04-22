@@ -45,14 +45,15 @@ export default function PricingComponent() {
     return (
       <>
       <PaddleLoader/>
-      <div>
-  <br></br>
+      <div
+      class="h-full min-h-screen bg-[#050505]"
+      >
 <div className="flex flex-wrap gap-6 justify-center w-full">
 <motion.div 
     whileHover={{
         scale:1.1
     }}
-    class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
+    class="w-1/2 max-w-md p-6 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c] shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
             <a href="#">
                 <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Free</h5> 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Absolutely Free.</h5> 
@@ -71,7 +72,7 @@ export default function PricingComponent() {
     whileHover={{
         scale:1.3
     }}
-    class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg rounded-2xl">
+    class="w-1/2 max-w-md p-6 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c]  shadow-lg rounded-2xl">
             <a href="#">
                 <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Individual</h5> 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">$3.99</h5>
@@ -99,7 +100,7 @@ export default function PricingComponent() {
     }}
     class="
     max-w-md
-    w-1/2 p-6 bg-zinc-900 shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
+    w-1/2 p-6 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c]  shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
             <a href="#">
                 <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Enterprise</h5> 
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">$35.99</h5> 
@@ -129,15 +130,12 @@ export default function PricingComponent() {
   }
   else {
     return (
-      <>
-      <div>
-  <br></br>
-<div className="flex flex-wrap gap-6 justify-center w-full">
+      <div className="flex flex-wrap gap-6 justify-center w-full">
 <motion.div 
     whileHover={{
         scale:1.1
     }}
-    class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
+    class="w-1/2 max-w-md p-6 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c] shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
             <a href="#">
                 <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Free</h5> 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Absolutely Free.</h5> 
@@ -147,7 +145,8 @@ export default function PricingComponent() {
             <p class="mb-3 font-normal text-white dark:text-gray-400">1 Project</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
-            <motion.button whileHover={{scale: 1.1}} onClick={redirectSignUp} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+            <motion.button onClick={redirectUser}
+            whileHover={{scale: 1.1}} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
        Start Free
        </motion.button>     
     </motion.div>  
@@ -156,7 +155,7 @@ export default function PricingComponent() {
     whileHover={{
         scale:1.3
     }}
-    class="w-1/2 max-w-md p-6 bg-zinc-900 shadow-lg rounded-2xl">
+    class="w-1/2 max-w-md p-6 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c]  shadow-lg rounded-2xl">
             <a href="#">
                 <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Individual</h5> 
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">$3.99</h5>
@@ -166,7 +165,8 @@ export default function PricingComponent() {
             <p class="mb-3 font-normal text-white dark:text-gray-400">1 Project </p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
-            <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+            <motion.button onClick={redirectUser}
+        whileHover={{scale: 1.1}} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
         Get Started
        </motion.button>   
     </motion.div> 
@@ -176,7 +176,7 @@ export default function PricingComponent() {
     }}
     class="
     max-w-md
-    w-1/2 p-6 bg-zinc-900 shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
+    w-1/2 p-6 bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c]  shadow-lg dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
             <a href="#">
                 <h5 class="mb-2 text-4xl font-bold tracking-tight text-white dark:text-white">Enterprise</h5> 
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">$35.99</h5> 
@@ -186,14 +186,12 @@ export default function PricingComponent() {
             <p class="mb-3 font-normal text-white dark:text-gray-400">Unlimited Projects </p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
             <p class="mb-3 font-normal text-white dark:text-gray-400">test</p>
-            <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+            <motion.button onClick={redirectUser}
+        whileHover={{scale: 1.1}} class="w-3/4 shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
         Get Started
        </motion.button>    
-            
     </motion.div> 
 </div>
-</div>
-      </>
     )
   }
 }
