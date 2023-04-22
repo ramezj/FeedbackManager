@@ -5,6 +5,10 @@ import { NextRequest } from 'next/server'
 
 export default async function handler(req, res) {
     console.log(req.headers);
+    console.log(req.headers["user-agent"]);
+    console.log(req.headers["x-forwarded-for"]);
+    console.log(req.headers["x-Forwarded-for"]);
+    console.log(req.headers["X-FORWARDED-FOR"]);
     const prisma = new PrismaClient();
     const { body, method } = req;
     if (method !== "POST") {

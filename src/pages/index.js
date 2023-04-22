@@ -77,7 +77,7 @@ export default function Home() {
         <br></br>
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white ">Managing your users feedback shouldnt be hard, nor expensive. Integrate the Feedbacker Widget Now.</p>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-       <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="flex items-center justify-center shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-14 py-3 font-medium tracking-wide text-white capitalize transition-colors transform rounded-lg">
+       <motion.button whileHover={{scale: 1.1}} onClick={redirectUser} class="font-semibold flex items-center justify-center shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 shadow-xl px-14 py-3 tracking-wide text-white capitalize transition-colors transform rounded-lg">
         Get Started
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
@@ -88,7 +88,7 @@ export default function Home() {
         </motion.div>
         {/* <Features /> */}
         <center>
-          <MVP userId={"6437d4b7450b4af65b3207d8"} projectId={"6437d4b7450b4af65b3207d9"} mode="dark"/>
+          <MVP userId={"64405e21056f230a39844dcb"} projectId={"64405e21056f230a39844dcc"} mode="dark"/>
         </center>
         <center>
         </center>

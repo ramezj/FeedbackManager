@@ -44,6 +44,7 @@ export default function Settings() {
     transition={{
       duration:1
     }}
+    class="h-full min-h-screen bg-black"
     >
       <NavbarComponent onClickRedirect={redirectDashboard} isLoggedIn={isLoggedIn} logged={logged} username={username}/>
       <center>

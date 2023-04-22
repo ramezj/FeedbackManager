@@ -11,7 +11,7 @@ export default function success() {
     transition={{
       duration:1
     }}
-    className='bg-black'
+    class="h-full min-h-screen bg-black"
     >
     <center>
       <br></br><br></br>
