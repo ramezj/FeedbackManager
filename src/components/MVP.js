@@ -125,7 +125,7 @@ const MVP = (props) => {
     }
     return (
     <div> 
-            <motion.div class="shadow shadow-lg bg-heyfeedback-hover max-w-sm p-6 rounded-2xl">
+            <motion.div class="shadow shadow-lg bg-gradient-to-br from-[#1d1d1d] to-[#0c0c0c] max-w-sm p-6 rounded-2xl">
     <a>
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Whats on your mind? 🔨 </h5>
         <br></br></a>

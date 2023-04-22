@@ -41,7 +41,7 @@ const NavbarComponent = (props) => {
   if(props.logged == true) {
     return (
       <>
-      <div className="navbar bg-black ">
+      <div className="navbar bg-[#050505]">
   <div className="navbar-start mt-2">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -90,7 +90,7 @@ const NavbarComponent = (props) => {
   }
     return (
 <>
-<div className="navbar bg-black ">
+<div className="navbar bg-[#050505]">
   <div className="navbar-start mt-2">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
