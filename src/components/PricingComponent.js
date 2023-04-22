@@ -124,12 +124,12 @@ export default function PricingComponent() {
     </motion.div> 
 </div>
 </div>
-      <p>{uid}</p>
       </>
     )
   }
   else {
     return (
+      <div class="h-full min-h-screen bg-[#050505]">
       <div className="flex flex-wrap gap-6 justify-center w-full">
 <motion.div 
     whileHover={{
@@ -191,6 +191,7 @@ export default function PricingComponent() {
         Get Started
        </motion.button>    
     </motion.div> 
+</div>
 </div>
     )
   }
