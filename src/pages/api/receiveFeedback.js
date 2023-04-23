@@ -15,6 +15,9 @@ export default async function handler(req, res) {
           });
     };
     const { id } = req.query;
+    const userAgent = req.headers["user-agent"];
+    const reqIp = req.headers["x-forwarded-for"];
+    const geo = req.headers['x-vercel-ip-country'];
     try {
         const userExist = await prisma.user.findMany({
             where:{
@@ -29,7 +32,10 @@ export default async function handler(req, res) {
                         rating:req.body.rating,
                         description:req.body.description,
                         userId:id,
-                        projectId:req.body.projectId
+                        projectId:req.body.projectId,
+                        ipAddress: reqIp,
+                        userAgent:userAgent,
+                        geo:geo
                     }
                 })
                 res.status(200).json({
