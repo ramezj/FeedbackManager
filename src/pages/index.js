@@ -9,7 +9,6 @@ import Footer from '../components/Footer';
 import "flowbite"
 import { useScroll, animated, } from '@react-spring/web'
 import Features from "../components/Features"
-import HeyFeedback from 'HeyFeedback';
 
 export default function Home() {
   const [content, set] = useState(2);
@@ -89,8 +88,7 @@ export default function Home() {
         </motion.div>
         {/* <Features /> */}
         <center>
-          <HeyFeedback userId={"644470dce2632866bd0462ad"} projectId={"644470dce2632866bd0462ae"} mode="dark"/>
-          {/* <MVP userId={"64405e21056f230a39844dcb"} projectId={"64405e21056f230a39844dcc"} mode="dark"/> */}
+          <MVP userId={"64405e21056f230a39844dcb"} projectId={"64405e21056f230a39844dcc"} mode="dark"/>
         </center>
         <center>
         </center>
