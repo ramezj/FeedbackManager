@@ -26,6 +26,7 @@
     "flowbite-react": "^0.4.2",
     "framer-motion": "^10.10.0",
     "got": "^12.6.0",
+    "heyfeedback": "^1.0.0",
     "highlight.js": "^11.7.0",
     "jsonwebtoken": "^9.0.0",
     "next": "13.2.4",
