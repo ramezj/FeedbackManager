@@ -6,7 +6,6 @@ import { useRouter } from 'next/router'
 import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
-import SyntaxHighlighter from "react-syntax-highlighter";
 import { motion } from "framer-motion";
 // import { shadesOfPurple } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -54,9 +53,6 @@ export default function Documentation() {
       <center>
         <br></br><br></br><br></br>
     <div class="w-96">
-    <SyntaxHighlighter language="javascript">
-            {codeString1}    
-        </SyntaxHighlighter>
 </div>
     </center>
 </motion.div>
