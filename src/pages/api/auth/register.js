@@ -31,7 +31,7 @@ export default async function handler(req, res) {
             });
         } else {
             try {
-                const hashedPassword = await bcrypt.hash(req.body.password, 10);
+                const hashedPassword = await bcrypt.hash(req.body.password, 5);
                 const createUser = await prisma.user.create({
                     data: {
                         username:req.body.username,

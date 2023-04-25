@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-import bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
 
 export default async function handler(req, res) {

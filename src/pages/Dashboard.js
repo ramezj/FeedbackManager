@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import UserInfo from '../components/UserInfo';
 import Cookies from 'universal-cookie';
-import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import NavbarComponent from '../components/Navbar'
 import "flowbite";
