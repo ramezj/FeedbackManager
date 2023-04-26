@@ -50,15 +50,15 @@ const RegisterForm = () => {
           <h1 class="text-3xl font-semibold text-white">Register</h1>
           <div>
                   <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your Username</label>
-                  <input type="email" name="email" value={username} onChange={(e) => {setUsername(e.target.value)}} class="border-none font-bold bg-MVP active:bg-MVP focus:bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 shadow shadow-lg" placeholder="Alfred" />
+                  <input autoComplete='off' type="email" name="email" value={username} onChange={(e) => {setUsername(e.target.value)}} class="border-none font-bold bg-MVP active:bg-MVP focus:bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 shadow shadow-lg" placeholder="Alfred" />
               </div>
               <div>
                   <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your email</label>
-                  <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="border-none font-bold bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="name@company.com" />
+                  <input autoComplete='off' type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="border-none font-bold bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white shadow shadow-lg" placeholder="name@company.com" />
               </div>
               <div>
                   <label for="password" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your password</label>
-                  <input type="password" name="password" id="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder="••••••••" class="border-none font-bold shadow shadow-lg bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                  <input autoComplete='off' type="password" name="password" id="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder="••••••••" class="border-none font-bold shadow shadow-lg bg-MVP text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
               </div>
               <button onClick={RegisterUser} class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Create Account</button>
               <div class="text-sm font-medium text-gray-500 dark:text-gray-300">

@@ -50,13 +50,14 @@ const LoginForm = () => {
     <h1 class="text-3xl font-semibold text-white">Login</h1>
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your email</label>
-            <input type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="outline-none font-bold shadow shadow-lg bg-MVP text-white text-sm rounded-lg block w-full p-2.5 border-none" placeholder="hey@Feedback.com" />
+            <input required autoComplete='off' type="email" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}} class="outline-none font-bold shadow shadow-lg bg-MVP text-white text-sm rounded-lg block w-full p-2.5 border-none" placeholder="hey@Feedback.com" />
         </div>
         <div>
             <label for="password" class="block mb-2 text-sm font-medium text-white dark:text-white float-left">Your password</label>
-            <input type="password" name="password" id="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder="••••••••" class="border-none font-bold shadow shadow-lg bg-MVP shadow shadow-lg bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+            <input autoComplete='off' required type="password" name="password" id="password" value={password} onChange={(e) => {setPassword(e.target.value)}} placeholder="••••••••" class="border-none font-bold shadow shadow-lg bg-MVP shadow shadow-lg bg-slate-900 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" />
         </div>
-        <button onClick={LoginUser} class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Login to your account</button>
+    
+        <button type="submit" onClick={LoginUser} class="shadow-md shadow-purple-500/20 bg-gradient-to-br from-purple-600 to-blue-500 duration-500 px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 w-full">Login to your account</button>
         {
                 loading 
                 ? (
