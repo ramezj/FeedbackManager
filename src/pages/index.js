@@ -4,11 +4,8 @@ import Cookies from 'universal-cookie';
 import NavbarComponent from '../components/Navbar';
 import { motion } from 'framer-motion';
 import MVP from '../components/MVP';
-import GlowAlert from '../components/GlowAlert';
 import Footer from '../components/Footer';
 import "flowbite"
-import { useScroll, animated, } from '@react-spring/web'
-import Features from "../components/Features"
 
 export default function Home() {
   const [content, set] = useState(2);
@@ -88,7 +85,7 @@ export default function Home() {
         </motion.div>
         {/* <Features /> */}
         <center>
-          <MVP userId={"64405e21056f230a39844dcb"} projectId={"64405e21056f230a39844dcc"} mode="dark"/>
+          <MVP userId={"6447fab74709f51c31825dda"} projectId={"6447faba4709f51c31825ddb"} mode="dark"/>
         </center>
         <center>
         </center>

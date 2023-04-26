@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import UserInfo from '../components/UserInfo';
 import Cookies from 'universal-cookie';
-import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import NavbarComponent from '../components/Navbar'
 import "flowbite";
 import  Footer  from '../components/Footer';
 import { motion } from "framer-motion";
-// import { shadesOfPurple } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function Documentation() {
   const [ isLoggedIn, setIsLoggedIn ] = useState("");

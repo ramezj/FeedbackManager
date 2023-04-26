@@ -60,7 +60,7 @@ export default function Dashboard() {
       <UserInfo />
     </center>
     </motion.div>
-    <Footer/>
+
     </>
   )
 }

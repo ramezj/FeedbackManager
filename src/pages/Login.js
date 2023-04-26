@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import LoginForm from '../components/LoginForm';
 import NavbarComponent from '../components/Navbar';
-import jwt from "jsonwebtoken";
 import { useRouter } from 'next/router'
 import Cookies from 'universal-cookie';
-import { AnimatePresence } from "framer-motion";
 import { motion } from 'framer-motion';
 import Footer from "../components/Footer";
 

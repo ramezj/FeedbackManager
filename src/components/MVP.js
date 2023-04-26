@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import useSWR from 'swr';
-import Cookies from 'universal-cookie';
-import { useRouter } from 'next/router'
-import { Input } from "@nextui-org/react";
 import { motion } from 'framer-motion';
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
