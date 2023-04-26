@@ -36,6 +36,7 @@ model Feedback {
   rating Int
   description String
   createdAt DateTime @default(now())
+  email String @default("")
   ipAddress String @default("0.0.0.0")
   geo String @default("")
   userAgent String @default("")

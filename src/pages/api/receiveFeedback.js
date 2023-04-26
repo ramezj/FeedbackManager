@@ -35,7 +35,8 @@ export default async function handler(req, res) {
                         projectId:req.body.projectId,
                         ipAddress: reqIp,
                         userAgent:userAgent,
-                        geo:geo
+                        geo:geo,
+                        email: req.body.email
                     }
                 })
                 res.status(200).json({

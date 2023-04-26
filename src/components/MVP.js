@@ -11,8 +11,7 @@ const MVP = (props) => {
     const [ projectId, setProjectId ] = useState("");
     const [ feedbackData, setFeedbackData ] = useState();
     const [ loading, setLoading ] = useState();
-    const [ ipAddress, setIpAddress ] = useState();
-    const [ location, setLocation ] = useState();
+    const [ email, setEmail ] = useState();
     const setAwful = () => {
         setRating(1)
     }
@@ -33,7 +32,8 @@ const MVP = (props) => {
         const payload = {
             rating:rating,
             description:description,
-            projectId: props.projectId
+            projectId: props.projectId,
+            email: email
         }
         const response = await fetch(`/api/receiveFeedback?id=${props.userId}`, {
             method:'POST',
@@ -104,7 +104,7 @@ const MVP = (props) => {
     ) 
     : (
         <>
-        <p className='font-bold text-white'>Send Feedback!</p>
+        <p className='font-bold text-white'>Send Feedback</p>
         </>
     )
  }
@@ -122,11 +122,15 @@ const MVP = (props) => {
     <a>
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Whats on your mind? 🔨 </h5>
         <br></br></a>
-<textarea required value={description} onChange={(e) => setDescription(e.target.value)} id="message" rows="4" class="font-bold ring:blue-500 shadow-xl block p-2.5 w-full text-sm text-white bg-MVP shadow shadow-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+        <input required value={email} onChange={(e) => setEmail(e.target.value)} class="outline-none focus:border-blue-500 font-bold shadow-xl block p-2.5 w-full text-sm text-white bg-MVP shadow shadow-lg rounded-lg" placeholder="Email" />
+        <br></br>
+<textarea required value={description} onChange={(e) => setDescription(e.target.value)} rows="4" class="border-none outline-none font-bold shadow-xl block p-2.5 w-full text-sm text-white bg-MVP shadow shadow-lg rounded-lg active:border-none focus:border-none" placeholder="Write your thoughts here..."></textarea>
 <br></br>
 <div class="space-x-4 ">
     <motion.button onClick={setAwful} whileHover={{scale: 1.2}} class="text-3xl">
-    😕
+        <span className="">
+        😕
+        </span>
     </motion.button>
 <motion.button onClick={setBad} whileHover={{scale: 1.2}} class="text-3xl">
  😬
@@ -165,7 +169,7 @@ const MVP = (props) => {
     ) 
     : (
         <>
-        <p className='font-bold text-white'>Send Feedback!</p>
+        <p className='font-bold text-white'>Send Feedback</p>
         </>
     )
  }
